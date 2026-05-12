@@ -3,404 +3,644 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>한국법학진흥원 | Korea Law Advancement Institute</title>
-<meta name="description" content="한국법학진흥원(KLAI)은 법학의 대중화와 학습 표준 정립을 위해 설립된 비영리 학술 기관입니다.">
-<meta name="theme-color" content="#5C1F2C">
-<meta property="og:title" content="한국법학진흥원 | Korea Law Advancement Institute">
-<meta property="og:description" content="법학의 대중화와 학습 표준 정립을 위한 비영리 학술 기관">
+<title>한국법학진흥원</title>
+<meta name="description" content="한국법학진흥원은 법학의 진흥과 법조 직역의 발전을 위한 비영리 단체입니다.">
+<meta name="theme-color" content="#0A0A0A">
+<meta property="og:title" content="한국법학진흥원">
+<meta property="og:description" content="법학의 진흥과 법조 직역의 발전을 위한 비영리 단체">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://klai.or.kr/">
 <meta property="og:locale" content="ko_KR">
 <link rel="canonical" href="https://klai.or.kr/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700;900&family=Noto+Sans+KR:wght@300;400;500;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
   :root{
-    --ink:#1F1714; --ink-soft:#3A2E28; --ink-muted:#6B5B52;
-    --bg:#F5EFE4; --paper:#FBF7EE;
-    --wine:#5C1F2C; --wine-dark:#3F1219; --wine-deep:#2A0B11;
-    --gold:#A8843E; --gold-soft:#C8A968;
-    --rule:#C8B89A; --rule-soft:#DCCFB6;
+    --ink:#0A0A0A;
+    --ink-2:#2A2A2A;
+    --ink-3:#666;
+    --ink-4:#A8A8A8;
+    --line:#E8E8E8;
+    --line-2:#1F1F1F;
+    --bg:#FFFFFF;
+    --bg-2:#F8F8F6;
+    --crimson:#9A0F1B;
+    --max:1200px;
   }
-  *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth; -webkit-text-size-adjust:100%}
   body{
-    font-family:'Noto Sans KR',system-ui,sans-serif;
-    background:var(--bg); color:var(--ink); line-height:1.7; font-size:15px;
-    -webkit-font-smoothing:antialiased;
+    font-family:'Noto Sans KR',-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Malgun Gothic',system-ui,sans-serif;
+    background:var(--bg); color:var(--ink); font-size:16px; line-height:1.7;
+    word-break:keep-all; -webkit-font-smoothing:antialiased;
   }
-  a{color:inherit;text-decoration:none}
+  a{color:inherit; text-decoration:none}
+  img,svg{display:block; max-width:100%}
+  ul{list-style:none}
 
-  /* ── Header ── */
-  header{background:var(--paper); border-bottom:1px solid var(--rule); position:relative}
-  header::after{
-    content:''; position:absolute; left:0; right:0; bottom:0; height:3px;
-    background:linear-gradient(90deg,var(--wine) 0,var(--wine) 38%,var(--gold) 38%,var(--gold) 41%,var(--wine) 41%,var(--wine) 100%);
+  /* ── 헤더 ── */
+  header{
+    position:fixed; top:0; left:0; right:0; z-index:100;
+    background:rgba(255,255,255,.95); backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--line);
   }
   .head{
-    max-width:1180px; margin:0 auto; padding:20px 28px;
-    display:flex; justify-content:space-between; align-items:center; gap:24px;
+    max-width:var(--max); margin:0 auto; padding:18px 32px;
+    display:flex; justify-content:space-between; align-items:center;
   }
-  .brand svg{height:54px; width:auto; display:block}
-  nav ul{list-style:none; display:flex; gap:4px; align-items:center}
+  .brand-logo{height:36px; display:block}
+  .brand-logo img{height:100%; width:auto}
+  nav ul{display:flex; gap:36px; align-items:center}
   nav a{
-    padding:10px 16px; font-size:14px; font-weight:500; color:var(--ink-soft);
-    border-bottom:2px solid transparent; transition:all .2s;
+    font-size:14.5px; font-weight:500; color:var(--ink-2);
+    letter-spacing:-0.012em; transition:color .15s;
   }
-  nav a:hover{color:var(--wine); border-bottom-color:var(--gold)}
+  nav a:hover{color:var(--ink)}
   nav a.cta{
-    margin-left:10px; padding:9px 18px;
-    background:var(--wine); color:var(--paper); border:1px solid var(--wine); font-size:13.5px;
+    padding:9px 18px; background:var(--crimson); color:#fff;
+    font-weight:500;
   }
-  nav a.cta:hover{background:var(--wine-dark); border-color:var(--wine-dark); border-bottom-color:var(--wine-dark)}
+  nav a.cta:hover{background:var(--ink)}
+  
+  /* 모바일 메뉴 토글 */
+  .menu-toggle{display:none}
 
-  /* ── Hero ── */
-  .hero{padding:90px 0 110px; position:relative; overflow:hidden}
+  main{padding-top:74px}
+
+  /* ── 공통: 섹션 ── */
+  section{
+    padding:140px 32px;
+    border-bottom:1px solid var(--line);
+  }
+  .inner{max-width:var(--max); margin:0 auto}
+  .label{
+    font-size:12.5px; font-weight:700; color:var(--crimson);
+    letter-spacing:0.2em; margin-bottom:20px;
+    display:inline-flex; align-items:center; gap:12px;
+  }
+  .label::before{
+    content:''; width:20px; height:1px; background:var(--crimson);
+  }
+  .label.on-dark{color:#fff}
+  .label.on-dark::before{background:#fff}
+
+  /* ── 1. 히어로 ── */
+  .hero{
+    padding:160px 32px 140px;
+    text-align:left;
+    border-bottom:1px solid var(--line);
+    position:relative;
+    overflow:hidden;
+  }
+  /* 배경 워터마크 영문 — 페이지에 묵직함 */
   .hero::before{
-    content:'振興'; position:absolute; right:-40px; top:20px;
-    font-family:'Noto Serif KR',serif; font-weight:900;
-    font-size:360px; line-height:1; color:rgba(92,31,44,.045);
-    letter-spacing:-0.05em; pointer-events:none; user-select:none;
+    content:'KLAI';
+    position:absolute;
+    right:-40px; bottom:-30px;
+    font-size:clamp(180px, 24vw, 360px);
+    font-weight:900; letter-spacing:-0.05em;
+    color:var(--bg-2); /* 매우 옅은 회색 */
+    line-height:1; pointer-events:none;
+    z-index:0; user-select:none;
+    font-family:'Noto Sans KR', sans-serif;
   }
-  .hero-inner{max-width:900px; margin:0 auto; padding:0 28px; position:relative; z-index:1}
-  .hero-label{display:inline-flex; align-items:center; gap:14px; margin-bottom:30px}
-  .hero-label .line{width:48px; height:1px; background:var(--wine)}
-  .hero-label .text{
-    font-family:'Cormorant Garamond',serif; font-style:italic;
-    color:var(--wine); font-size:15px; letter-spacing:0.08em;
+  /* 우측 일러스트 — 기둥+천칭+법전 (또는 사진) */
+  .hero-mark{
+    position:absolute;
+    right:6vw; top:50%;
+    transform:translateY(-50%);
+    width:clamp(260px, 32vw, 460px);
+    aspect-ratio: 5 / 6;
+    z-index:1; pointer-events:none;
+    opacity:.95;
   }
+  .hero-mark svg{width:100%; height:100%; display:block}
+  /* 히어로 사진 — 우측에 배치되는 인물/공간 컷 */
+  .hero-photo{
+    position:absolute;
+    right:6vw; top:50%;
+    transform:translateY(-50%);
+    width:clamp(280px, 36vw, 520px);
+    aspect-ratio: 4 / 5;
+    z-index:1;
+    overflow:hidden;
+    background:#0A0A0A;
+    margin:0;
+  }
+  .hero-photo img{
+    width:100%; height:100%; object-fit:cover; object-position:center;
+    filter:grayscale(.35) contrast(1.06) brightness(.96);
+    transition:filter .6s ease;
+  }
+  .hero-photo-credit{
+    position:absolute;
+    left:0; bottom:0;
+    padding:8px 12px;
+    font-size:10.5px; letter-spacing:0.04em;
+    color:rgba(255,255,255,.78);
+    background:linear-gradient(to top, rgba(0,0,0,.55), rgba(0,0,0,0));
+    width:100%;
+    font-weight:400;
+    pointer-events:none;
+  }
+  /* 사진이 있으면 SVG 자동 숨김 */
+  .hero:has(.hero-photo) .hero-mark{display:none}
+  .hero .inner{position:relative; z-index:2}
   .hero h1{
-    font-family:'Noto Serif KR',serif; font-weight:700;
-    font-size:clamp(36px, 5.4vw, 60px); line-height:1.2;
-    letter-spacing:-0.015em; margin-bottom:28px;
+    font-size:clamp(36px, 5vw, 64px);
+    line-height:1.2; letter-spacing:-0.032em;
+    font-weight:800; color:var(--ink);
+    margin-bottom:32px; max-width:900px;
+    position:relative; z-index:2;
   }
-  .hero h1 .accent{color:var(--wine)}
-  .hero-en{
-    font-family:'Cormorant Garamond',serif; font-style:italic;
-    font-size:22px; color:var(--ink-muted); margin-bottom:34px;
+  .hero h1 .pt{display:block}
+  .hero-lede{
+    font-size:17px; line-height:1.7; color:var(--ink-2);
+    max-width:540px;
+    font-weight:400;
+    position:relative; z-index:2;
   }
-  .hero-text{
-    font-size:16px; line-height:1.95; color:var(--ink-soft);
-    max-width:680px; margin-bottom:42px;
+
+  /* ── 2. 사업 (3가지) ── */
+  .biz{
+    padding:100px 32px;
+    background:var(--ink); color:#fff;
+    border-bottom:none;
   }
-  .hero-text strong{color:var(--wine-dark); font-weight:600}
-  .hero-cta{display:flex; gap:14px; flex-wrap:wrap}
+  .biz .label{color:#fff}
+  .biz-grid{
+    margin-top:48px;
+    display:grid; grid-template-columns:repeat(3,1fr);
+    gap:0;
+  }
+  .biz-item{
+    padding:8px 36px 8px 0;
+    border-right:1px solid var(--line-2);
+    position:relative;
+  }
+  .biz-item:last-child{border-right:none; padding-right:0}
+  .biz-item .num{
+    font-size:12px; color:var(--ink-4); font-weight:500;
+    letter-spacing:0.16em; margin-bottom:14px;
+  }
+  .biz-item h3{
+    font-size:22px; font-weight:700; color:#fff;
+    letter-spacing:-0.022em; line-height:1.3;
+    margin-bottom:10px;
+  }
+  .biz-item p{
+    font-size:14px; line-height:1.7; color:#A8A8A8;
+  }
+
+  /* ── 3. 산하 (2개) ── */
+  .subs{
+    padding:100px 32px;
+    background:var(--bg);
+  }
+  .subs-grid{
+    margin-top:48px;
+    display:grid; grid-template-columns:1fr 1fr;
+    gap:0; border-top:1px solid var(--ink);
+  }
+  .sub-item{
+    padding:32px 40px 32px 0;
+    border-bottom:1px solid var(--line);
+    border-right:1px solid var(--line);
+    display:flex; flex-direction:column;
+    transition:padding .25s;
+  }
+  .sub-item:nth-child(2n){padding-right:0; padding-left:40px; border-right:none}
+  .sub-item:hover{padding-top:26px}
+  .sub-item h3{
+    font-size:22px; font-weight:700; color:var(--ink);
+    letter-spacing:-0.022em; line-height:1.3; margin-bottom:10px;
+  }
+  .sub-item p{
+    font-size:14px; line-height:1.7; color:var(--ink-3);
+    margin-bottom:22px;
+  }
+  .sub-item .go{
+    margin-top:auto;
+    display:inline-flex; align-items:center; gap:10px;
+    font-size:13px; font-weight:600; color:var(--ink);
+    transition:gap .2s;
+  }
+  .sub-item .go:hover{gap:14px; color:var(--crimson)}
+  .sub-item .go .arr{font-size:14px}
+
+  /* ── 4. 개요 ── */
+  .define{
+    padding:100px 32px;
+    background:var(--bg-2);
+  }
+  .define h2{
+    font-size:clamp(22px, 2.6vw, 32px);
+    line-height:1.5; letter-spacing:-0.02em;
+    font-weight:600; color:var(--ink);
+    max-width:880px; margin-bottom:20px;
+  }
+  .define-sub{
+    font-size:15px; line-height:1.7; color:var(--ink-3);
+    max-width:680px; font-weight:400;
+  }
+
+  /* ── 5. CTA (후원·문의) ── */
+  .cta{
+    padding:110px 32px;
+    background:var(--ink); color:#fff;
+    border-bottom:none;
+  }
+  .cta h2{
+    font-size:clamp(26px, 3.2vw, 40px);
+    line-height:1.35; letter-spacing:-0.025em;
+    font-weight:700; color:#fff;
+    max-width:760px; margin-bottom:36px;
+  }
+  .cta h2 em{font-style:normal; color:var(--crimson); font-weight:700}
+  .cta-row{
+    display:flex; gap:12px; flex-wrap:wrap;
+  }
   .btn{
     display:inline-flex; align-items:center; gap:10px;
-    padding:14px 28px; font-size:14px; font-weight:500;
-    letter-spacing:0.02em; border:1px solid transparent; transition:all .25s;
+    padding:14px 26px; font-size:14px; font-weight:600;
+    letter-spacing:-0.005em; transition:all .2s;
+    border:1px solid transparent;
   }
-  .btn .arr{font-family:'Cormorant Garamond',serif; font-size:18px}
-  .btn-primary{background:var(--wine); color:var(--paper); border-color:var(--wine)}
-  .btn-primary:hover{background:var(--wine-dark); border-color:var(--wine-dark); transform:translateY(-2px)}
-  .btn-ghost{color:var(--ink); border-color:var(--ink-soft)}
-  .btn-ghost:hover{background:var(--ink); color:var(--paper); transform:translateY(-2px)}
+  .btn .arr{transition:transform .2s; font-size:14px}
+  .btn:hover .arr{transform:translateX(4px)}
+  .btn-light{background:#fff; color:var(--ink); border-color:#fff}
+  .btn-light:hover{background:var(--crimson); color:#fff; border-color:var(--crimson)}
+  .btn-line{color:#fff; border-color:rgba(255,255,255,.3)}
+  .btn-line:hover{border-color:#fff; background:rgba(255,255,255,.06)}
 
-  /* ── About ── */
-  .about{
-    background:var(--paper); border-top:1px solid var(--rule); border-bottom:1px solid var(--rule);
-    padding:90px 0;
+  /* ── 푸터 ── */
+  footer{
+    padding:60px 32px 36px;
+    background:var(--ink); color:var(--ink-4);
+    font-size:13px;
   }
-  .about-inner{
-    max-width:1180px; margin:0 auto; padding:0 28px;
-    display:grid; grid-template-columns:1fr 1.5fr; gap:80px;
+  .foot{
+    max-width:var(--max); margin:0 auto;
+    display:flex; justify-content:space-between; align-items:flex-end;
+    flex-wrap:wrap; gap:30px;
   }
-  .eyebrow{
-    display:inline-flex; align-items:center; gap:12px;
-    font-family:'Cormorant Garamond',serif;
-    color:var(--wine); font-size:14px; letter-spacing:0.18em;
-    text-transform:uppercase; margin-bottom:18px;
+  .foot-left .foot-logo{
+    height:30px; margin-bottom:20px;
   }
-  .eyebrow::before{content:''; width:32px; height:1px; background:var(--wine)}
-  .sec-title{
-    font-family:'Noto Serif KR',serif; font-weight:700;
-    font-size:clamp(26px, 3.4vw, 36px); line-height:1.3;
-    letter-spacing:-0.01em;
+  .foot-left p{
+    font-size:12px; line-height:1.85; color:var(--ink-4); max-width:420px;
   }
-  .sec-title .gold{color:var(--wine)}
-  .about-info{margin-top:34px; display:grid; grid-template-columns:1fr 1fr; gap:24px}
-  .info{border-top:1px solid var(--ink); padding-top:14px}
-  .info .k{
-    font-family:'Cormorant Garamond',serif; font-style:italic;
-    color:var(--wine); font-size:13px; letter-spacing:0.12em; margin-bottom:6px;
+  .foot-right{
+    text-align:right; font-size:12px; line-height:1.85; color:var(--ink-4);
   }
-  .info .v{font-family:'Noto Serif KR',serif; font-weight:600; font-size:15px}
-  .about-text p{margin-bottom:20px; color:var(--ink-soft); font-size:15px; line-height:1.95}
-  .about-text p strong{color:var(--wine-dark); font-weight:600}
-
-  /* ── Twin cards ── */
-  .twin{padding:90px 0; background:var(--bg)}
-  .twin-inner{max-width:1180px; margin:0 auto; padding:0 28px}
-  .twin-head{text-align:center; margin-bottom:50px}
-  .twin-head .eyebrow{display:inline-flex}
-  .twin-head .eyebrow::before{display:none}
-  .twin-grid{display:grid; grid-template-columns:1fr 1fr; gap:24px}
-  .twin-card{
-    background:var(--wine-deep); color:#E8DDC4;
-    padding:44px 38px 40px; transition:transform .3s, box-shadow .3s;
-  }
-  .twin-card:hover{transform:translateY(-4px); box-shadow:0 30px 60px -30px rgba(60,30,20,.4)}
-  .twin-card.alt{background:var(--paper); color:var(--ink); border:1px solid var(--rule)}
-  .twin-card .lbl{
-    font-family:'Cormorant Garamond',serif; font-style:italic;
-    font-size:13px; letter-spacing:0.16em; margin-bottom:14px;
-    color:var(--gold-soft);
-  }
-  .twin-card.alt .lbl{color:var(--wine)}
-  .twin-card h3{
-    font-family:'Noto Serif KR',serif; font-weight:700;
-    font-size:26px; margin-bottom:6px; letter-spacing:-0.01em;
-    color:#F5EFE4;
-  }
-  .twin-card.alt h3{color:var(--wine-dark)}
-  .twin-card .en{
-    font-family:'Cormorant Garamond',serif; font-style:italic;
-    font-size:15px; margin-bottom:20px;
-    color:var(--gold-soft);
-  }
-  .twin-card.alt .en{color:var(--ink-muted)}
-  .twin-card p{font-size:14px; line-height:1.85; margin-bottom:24px; color:#D4C5A3}
-  .twin-card.alt p{color:var(--ink-soft)}
-  .twin-card .link{
-    display:inline-flex; align-items:center; gap:10px;
-    padding:11px 20px; font-weight:500; font-size:13.5px;
-    letter-spacing:0.02em; transition:all .2s;
-    background:var(--gold); color:var(--wine-deep);
-  }
-  .twin-card .link:hover{background:var(--gold-soft); transform:translateX(3px)}
-  .twin-card.alt .link{background:var(--wine); color:var(--paper); border:1px solid var(--wine)}
-  .twin-card.alt .link:hover{background:var(--wine-dark); border-color:var(--wine-dark)}
-
-  /* ── Footer ── */
-  footer{background:var(--wine-deep); color:#E8DDC4; padding:60px 0 30px}
-  .foot-inner{max-width:1180px; margin:0 auto; padding:0 28px}
-  .foot-top{
-    display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:50px;
-    padding-bottom:36px; border-bottom:1px solid rgba(168,132,62,.2);
-  }
-  .foot-brand svg{width:200px; height:auto; margin-bottom:18px}
-  .foot-brand p{font-size:13px; line-height:1.8; color:#C8B89A; max-width:340px}
-  .foot-col h5{
-    font-family:'Cormorant Garamond',serif; font-size:12px;
-    letter-spacing:0.22em; color:var(--gold-soft); text-transform:uppercase;
-    margin-bottom:16px; padding-bottom:10px;
-    border-bottom:1px solid rgba(168,132,62,.2);
-  }
-  .foot-col ul{list-style:none}
-  .foot-col li{margin-bottom:9px; font-size:13px}
-  .foot-col a{color:#C8B89A}
-  .foot-col a:hover{color:var(--gold-soft)}
-  .legal{
-    margin-top:24px; font-size:11.5px; color:#8B7A60; line-height:1.9;
-    letter-spacing:0.02em;
-  }
-  .legal .row{display:flex; gap:8px; flex-wrap:wrap}
-  .legal .row b{color:#C8B89A; font-weight:500; min-width:90px}
+  .foot-right a{color:var(--ink-4)}
+  .foot-right a:hover{color:#fff}
   .foot-bottom{
-    padding-top:24px; display:flex; justify-content:space-between;
-    align-items:center; flex-wrap:wrap; gap:14px;
-    font-size:11.5px; color:#8B7A60; letter-spacing:0.04em;
+    max-width:var(--max); margin:36px auto 0;
+    padding-top:28px; border-top:1px solid var(--line-2);
+    display:flex; justify-content:space-between; align-items:center;
+    flex-wrap:wrap; gap:14px;
+    font-size:11.5px; color:#666;
   }
-  .foot-bottom .est{
-    font-family:'Cormorant Garamond',serif; font-style:italic;
-    color:var(--gold-soft); font-size:13px; letter-spacing:0.14em;
+  .foot-bottom .links{display:flex; gap:0}
+  .foot-bottom .links a{
+    padding:0 14px; border-right:1px solid var(--line-2); color:#888;
   }
+  .foot-bottom .links a:last-child{border-right:none}
+  .foot-bottom .links a:hover{color:#fff}
 
-  /* ── Mobile ── */
-  @media (max-width:980px){
-    .head{flex-wrap:wrap; gap:14px}
-    nav ul{flex-wrap:wrap; justify-content:flex-end}
-    .about-inner{grid-template-columns:1fr; gap:36px}
-    .twin-grid{grid-template-columns:1fr}
-    .foot-top{grid-template-columns:1fr; gap:30px}
-    .hero::before{font-size:200px; right:-40px}
+  /* ── 관련 기관 (카드 그리드) ── */
+  .partners{
+    background:var(--bg-2);
+    border-top:1px solid var(--line);
+    padding:80px 32px 90px;
   }
-  @media (max-width:600px){
-    .head{padding:14px 20px}
-    nav a{padding:8px 10px; font-size:13px}
-    nav a.cta{margin-left:0; margin-top:6px}
-    .hero{padding:60px 0 80px}
-    .hero h1{font-size:30px}
-    .hero-inner,.about-inner,.twin-inner,.foot-inner{padding:0 20px}
-    .about,.twin{padding:60px 0}
-    .twin-card{padding:34px 26px}
-    .about-info{grid-template-columns:1fr}
+  .partners-inner{
+    max-width:var(--max); margin:0 auto;
   }
+  .partners-head{
+    margin-bottom:48px;
+  }
+  .partners-desc{
+    font-size:14.5px; color:var(--ink-3); line-height:1.7;
+    margin-top:-4px; max-width:560px;
+  }
+  .partners-group{
+    margin-bottom:36px;
+  }
+  .partners-group:last-child{margin-bottom:0}
+  .partners-group h4{
+    font-size:12.5px; color:var(--ink); font-weight:700;
+    letter-spacing:0.06em; margin-bottom:14px;
+    padding-bottom:10px; border-bottom:1px solid var(--line);
+  }
+  .partners-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill, minmax(160px, 1fr));
+    gap:0;
+    background:#fff; border:1px solid var(--line);
+  }
+  .logo-card{
+    aspect-ratio: 16 / 7;
+    display:flex; align-items:center; justify-content:center;
+    padding:0 16px;
+    border-right:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+    background:#fff;
+    transition:all .25s;
+    position:relative;
+    overflow:hidden;
+  }
+  /* 카드 안의 텍스트 (로고 자리표시자) */
+  .logo-card .name{
+    font-size:13.5px; font-weight:600; color:var(--ink-3);
+    letter-spacing:-0.012em; text-align:center;
+    line-height:1.3;
+    transition:color .2s;
+    filter:grayscale(1);
+  }
+  .logo-card:hover{
+    background:var(--ink);
+    z-index:2;
+  }
+  .logo-card:hover .name{
+    color:#fff; filter:grayscale(0);
+  }
+  /* 우측·하단 가장자리 카드의 border 정리 — auto-fill이라 동적이므로 일률 처리 */
 
-  .reveal{opacity:0; transform:translateY(20px); animation:r 1s cubic-bezier(.2,.7,.2,1) forwards}
-  .reveal.d1{animation-delay:.1s}
-  .reveal.d2{animation-delay:.25s}
-  .reveal.d3{animation-delay:.4s}
-  @keyframes r{to{opacity:1; transform:translateY(0)}}
+  /* 반응형 */
+  @media (max-width:1024px){
+    .biz-grid{grid-template-columns:1fr; gap:0}
+    .biz-item{
+      padding:28px 0; border-right:none; border-bottom:1px solid var(--line-2);
+    }
+    .biz-item:last-child{border-bottom:none}
+    .subs-grid{grid-template-columns:1fr}
+    .sub-item{padding:30px 0 !important; border-right:none}
+    .partners-grid{grid-template-columns:repeat(4, 1fr)}
+    .hero-mark{right:-2vw; width:280px; opacity:.6}
+    .hero-photo{right:3vw; width:clamp(240px, 34vw, 380px); opacity:.88}
+    .hero::before{font-size:200px; right:-40px; bottom:-20px}
+  }
+  @media (max-width:680px){
+    /* 모바일에서는 장식 요소 모두 숨김 */
+    .hero-mark,.hero-photo,.hero::before{display:none}
+    section,.hero,.biz,.subs,.define,.cta{padding-left:22px; padding-right:22px}
+    .hero{padding-top:100px; padding-bottom:80px}
+    section.biz,section.subs,section.define,section.cta{padding-top:70px; padding-bottom:70px}
+    .head{padding:14px 22px}
+    .brand-logo{height:30px}
+    nav ul{gap:14px}
+    nav a{font-size:13px}
+    nav a.cta{padding:8px 14px; font-size:12.5px}
+    nav a.hide-sm{display:none}
+    .hero h1{font-size:30px; line-height:1.25}
+    .define h2{font-size:18px; line-height:1.55}
+    .cta h2{font-size:22px; line-height:1.4}
+    .biz-item h3,.sub-item h3{font-size:18px}
+    .hero-lede{font-size:15px}
+    .partners{padding:50px 22px 60px}
+    .partners-head{margin-bottom:32px}
+    .partners-grid{grid-template-columns:repeat(3, 1fr)}
+    .logo-card{aspect-ratio: 4 / 2.4}
+    .logo-card .name{font-size:11.5px}
+    .foot{flex-direction:column; align-items:flex-start}
+    .foot-right{text-align:left}
+    footer{padding:50px 22px 30px}
+  }
 </style>
 </head>
 <body>
 
 <header>
   <div class="head">
-    <a href="#" class="brand" aria-label="한국법학진흥원 홈">
-      <svg viewBox="0 0 280 70" xmlns="http://www.w3.org/2000/svg" aria-label="KLAI 한국법학진흥원">
-        <g font-family="'Noto Sans KR','Arial Black',sans-serif" font-weight="900" font-size="42" letter-spacing="-1.2">
-          <text x="6" y="40" fill="#B71C2C">K</text>
-          <text x="34" y="40" fill="#1F1714">LAI</text>
-        </g>
-        <path d="M 88 32 Q 116 22 142 36" fill="none" stroke="#B71C2C" stroke-width="1.4" stroke-linecap="round" opacity="0.85"/>
-        <text x="6" y="62" font-family="'Noto Sans KR',sans-serif" font-weight="700" font-size="17" letter-spacing="3" fill="#1F1714">한국법학진흥원</text>
-      </svg>
+    <a href="#" class="brand-logo" aria-label="한국법학진흥원 홈">
+      <img src="assets/klai_logo.svg" alt="한국법학진흥원 KLAI">
     </a>
     <nav aria-label="주메뉴">
       <ul>
-        <li><a href="#about">진흥원 소개</a></li>
-        <li><a href="#twin">부속·후원</a></li>
-        <li><a href="https://klaiedu.com" target="_blank" rel="noopener" class="cta">연수원 바로가기 ↗</a></li>
+        <li><a href="#biz" class="hide-sm">사업</a></li>
+        <li><a href="#subs" class="hide-sm">부설기관</a></li>
+        <li><a href="#define" class="hide-sm">개요</a></li>
+        <li><a href="#cta" class="cta">후원·문의</a></li>
       </ul>
     </nav>
   </div>
 </header>
 
+<main>
+
+<!-- 1. 히어로 -->
 <section class="hero">
-  <div class="hero-inner">
-    <div class="hero-label reveal">
-      <span class="line"></span>
-      <span class="text">EST. 2024 · 韓國法學振興院</span>
-    </div>
-    <h1 class="reveal d1">
-      법학의 토대를 다지고,<br>
-      <span class="accent">새 시대의 법학 인재</span>를 양성합니다.
+  <figure class="hero-photo" aria-hidden="true">
+    <img src="assets/hero.jpg" alt="" loading="eager" fetchpriority="high" width="1080" height="1350">
+    <span class="hero-photo-credit">Palais de Justice, Bruxelles · ph. Alex Vasey</span>
+  </figure>
+  <div class="inner">
+    <h1>
+      <span class="pt">법학의 진흥과</span>
+      <span class="pt">법조 직역의 발전</span>
     </h1>
-    <p class="hero-en reveal d2">Advancing legal scholarship for the age of intelligence.</p>
-    <p class="hero-text reveal d2">
-      한국법학진흥원(KLAI)은 <strong>법학의 대중화, 법학교육의 질적 향상, 법학 학습 표준 정립</strong>을
-      목적으로 설립된 비영리 학술 기관입니다.
-      부속 연수원을 통해 법학 정규·전문가 과정을 운영하고,
-      법학경시대회를 비롯한 학술 사업을 후원합니다.
+    <p class="hero-lede">
+      한국법학진흥원은 법학교육 지원과 청년변호사 옹호, 변호사 직역 연구를 수행하는 비영리 단체입니다.
     </p>
-    <div class="hero-cta reveal d3">
-      <a href="https://klaiedu.com" target="_blank" rel="noopener" class="btn btn-primary">연수원 바로가기 <span class="arr">↗</span></a>
-      <a href="#about" class="btn btn-ghost">진흥원 소개 <span class="arr">→</span></a>
+  </div>
+</section>
+
+<!-- 2. 사업 — 3가지 -->
+<section class="biz" id="biz">
+  <div class="inner">
+    <span class="label on-dark">사업</span>
+    <div class="biz-grid">
+      <article class="biz-item">
+        <div class="num">01</div>
+        <h3>사회봉사</h3>
+        <p>법률구조 협력과 공익 법률 사업을 통해 사회적 약자의 법률 접근성을 높입니다.</p>
+      </article>
+      <article class="biz-item">
+        <div class="num">02</div>
+        <h3>청년변호사 지원</h3>
+        <p>기부·멘토링·강사 위촉을 통해 개업 초기 청년변호사의 자립을 돕습니다.</p>
+      </article>
+      <article class="biz-item">
+        <div class="num">03</div>
+        <h3>직역 연구</h3>
+        <p>변호사 직역과 법학교육 정책에 관한 학술 연구를 수행합니다.</p>
+      </article>
     </div>
   </div>
 </section>
 
-<section class="about" id="about">
-  <div class="about-inner">
-    <div>
-      <div class="eyebrow">About</div>
-      <h2 class="sec-title">법학의 진흥(振興)은,<br>한 세대의 학습을 <span class="gold">다음 세대의 자산</span>으로 잇는 일입니다.</h2>
-      <div class="about-info">
-        <div class="info">
-          <div class="k">Foundation</div>
-          <div class="v">2024.11.26</div>
-        </div>
-        <div class="info">
-          <div class="k">Type</div>
-          <div class="v">비영리 학술 기관</div>
-        </div>
-        <div class="info">
-          <div class="k">Subordinate</div>
-          <div class="v">부속 연수원</div>
-        </div>
-        <div class="info">
-          <div class="k">Base</div>
-          <div class="v">광화문 변호사회관</div>
-        </div>
-      </div>
-    </div>
-    <div class="about-text">
-      <p>
-        법학전문대학원 체제가 도입된 이후, 학부 법학교육의 기반은 점점 좁아져 왔습니다.
-        비전공자를 포함한 일반 학습자가 법학을 체계적으로 접할 수 있는 경로 또한 좁아진 가운데,
-        한국법학진흥원은 이 공백을 <strong>교육·경시대회·학술 사업</strong>의 다층 구조로 메우기 위해 설립되었습니다.
-      </p>
-      <p>
-        진흥원은 학문으로서의 법학이 가진 깊이를 존중하되,
-        학습의 문턱이 학력·지역·경제력에 의해 좁아지지 않도록 길을 넓히는 일을 첫 번째 책무로 삼습니다.
-        부속 연수원을 통한 정규 교육 사업, 법학경시대회 주최, 학술 출판·연구가 진흥원의 세 축입니다.
-      </p>
+<!-- 4. 부설기관 -->
+<section class="subs" id="subs">
+  <div class="inner">
+    <span class="label">부설기관</span>
+    <div class="subs-grid">
+      <a href="ready.html" class="sub-item">
+        <h3>법학연구소</h3>
+        <p>변호사 직역과 법학교육에 관한 학술 연구.</p>
+        <span class="go">준비 중 <span class="arr">→</span></span>
+      </a>
+      <a href="https://klaiedu.com" target="_blank" rel="noopener" class="sub-item">
+        <h3>연수원</h3>
+        <p>법학 교육과정 운영.</p>
+        <span class="go">klaiedu.com <span class="arr">↗</span></span>
+      </a>
     </div>
   </div>
 </section>
 
-<section class="twin" id="twin">
-  <div class="twin-inner">
-    <div class="twin-head">
-      <div class="eyebrow">Affiliated &amp; Patronage</div>
-      <h2 class="sec-title">부속 연수원과 후원 사업</h2>
+<!-- 5. 정의 (구 "개요") -->
+<section class="define" id="define">
+  <div class="inner">
+    <span class="label">개요</span>
+    <h2>
+      법학교육의 공백을 메우고,
+      법조 직역의 발전을 위해 활동하는
+      비영리 단체입니다.
+    </h2>
+    <p class="define-sub">광화문 변호사회관에 본부를 두고 있으며, 부설 법학연구소와 연수원을 운영합니다.</p>
+  </div>
+</section>
+
+<!-- 6. CTA -->
+<section class="cta" id="cta">
+  <div class="inner">
+    <h2><em>여러분의 후원이</em> 법조 공동체의 미래를 만듭니다</h2>
+    <div class="cta-row">
+      <a href="#" class="btn btn-light">후원하기 <span class="arr">→</span></a>
+      <a href="mailto:info@klai.or.kr" class="btn btn-line">문의 <span class="arr">→</span></a>
     </div>
-    <div class="twin-grid">
-      <div class="twin-card">
-        <div class="lbl">Affiliated · 부속 교육시설</div>
-        <h3>한국법학진흥원 연수원</h3>
-        <div class="en">Korea Law Advancement Institute · Academy</div>
-        <p>
-          진흥원이 운영하는 부속 교육시설. 법학 정규 과정(헌법·민법·형법)과
-          전문가 양성 과정(법령정보분석·도산법 실무 등)을 운영합니다.
-          수강 신청·내 강의실은 별도 사이트에서 제공됩니다.
-        </p>
-        <a href="https://klaiedu.com" target="_blank" rel="noopener" class="link">klaiedu.com 바로가기 ↗</a>
+  </div>
+</section>
+
+</main>
+
+<!-- 관련 기관 (사법연수원 패밀리사이트 스타일) -->
+<section class="partners">
+  <div class="partners-inner">
+    <div class="partners-head">
+      <span class="label">관련 기관</span>
+      <p class="partners-desc">한국법학진흥원과 함께하는 법조 공동체와 법학교육 기관입니다.</p>
+    </div>
+
+    <div class="partners-group">
+      <h4>법조 단체</h4>
+      <div class="partners-grid">
+        <a href="https://www.koreanbar.or.kr" target="_blank" rel="noopener" class="logo-card" data-logo="koreanbar">
+          <span class="name">대한변호사협회</span>
+        </a>
+        <a href="https://www.seoulbar.or.kr" target="_blank" rel="noopener" class="logo-card" data-logo="seoulbar">
+          <span class="name">서울지방변호사회</span>
+        </a>
+        <a href="https://www.klcukba.or.kr" target="_blank" rel="noopener" class="logo-card" data-logo="klcukba">
+          <span class="name">변호사공제재단</span>
+        </a>
+        <a href="https://www.legalaid.or.kr" target="_blank" rel="noopener" class="logo-card" data-logo="legalaid">
+          <span class="name">대한변협법률구조재단</span>
+        </a>
+        <a href="http://www.kalp.or.kr" target="_blank" rel="noopener" class="logo-card" data-logo="kalp">
+          <span class="name">한국법학교수회</span>
+        </a>
       </div>
-      <div class="twin-card alt">
-        <div class="lbl">Patronage · 대표 후원 사업</div>
-        <h3>법학경시대회</h3>
-        <div class="en">Korean Law Olympiad</div>
-        <p>
-          학력·지역·경제력의 진입장벽 없이 법학 인재를 발굴·양성하는 공익 학술 대회.
-          제1~7회는 법률사무소 선율의 위원회가 주최하였고,
-          제8회부터 한국법학진흥원이 주최를 이어받습니다.
-        </p>
-        <a href="https://lawtest.or.kr" target="_blank" rel="noopener" class="link">lawtest.or.kr 바로가기 ↗</a>
+    </div>
+
+    <div class="partners-group">
+      <h4>정부 · 사법기관</h4>
+      <div class="partners-grid">
+        <a href="https://www.moj.go.kr" target="_blank" rel="noopener" class="logo-card" data-logo="moj">
+          <span class="name">법무부</span>
+        </a>
+        <a href="https://www.scourt.go.kr" target="_blank" rel="noopener" class="logo-card" data-logo="scourt">
+          <span class="name">대법원</span>
+        </a>
+        <a href="https://www.ccourt.go.kr" target="_blank" rel="noopener" class="logo-card" data-logo="ccourt">
+          <span class="name">헌법재판소</span>
+        </a>
+        <a href="https://jrti.scourt.go.kr" target="_blank" rel="noopener" class="logo-card" data-logo="jrti">
+          <span class="name">사법연수원</span>
+        </a>
+        <a href="https://www.moleg.go.kr" target="_blank" rel="noopener" class="logo-card" data-logo="moleg">
+          <span class="name">법제처</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="partners-group">
+      <h4>법학전문대학원 (25개)</h4>
+      <div class="partners-grid">
+        <a href="https://law.snu.ac.kr" target="_blank" rel="noopener" class="logo-card" data-logo="snu">
+          <span class="name">서울대</span></a>
+        <a href="https://lawschool.korea.ac.kr" target="_blank" rel="noopener" class="logo-card" data-logo="korea">
+          <span class="name">고려대</span></a>
+        <a href="https://lawschool.yonsei.ac.kr" target="_blank" rel="noopener" class="logo-card" data-logo="yonsei">
+          <span class="name">연세대</span></a>
+        <a href="https://law.skku.edu" target="_blank" rel="noopener" class="logo-card" data-logo="skku">
+          <span class="name">성균관대</span></a>
+        <a href="https://law.hanyang.ac.kr" target="_blank" rel="noopener" class="logo-card" data-logo="hanyang">
+          <span class="name">한양대</span></a>
+        <a href="https://my.ewha.ac.kr/lawschool" target="_blank" rel="noopener" class="logo-card" data-logo="ewha">
+          <span class="name">이화여대</span></a>
+        <a href="https://lawschool.khu.ac.kr" target="_blank" rel="noopener" class="logo-card" data-logo="khu">
+          <span class="name">경희대</span></a>
+        <a href="https://lawschool.sogang.ac.kr" target="_blank" rel="noopener" class="logo-card" data-logo="sogang">
+          <span class="name">서강대</span></a>
+        <a href="https://lawschool.cau.ac.kr" target="_blank" rel="noopener" class="logo-card" data-logo="cau">
+          <span class="name">중앙대</span></a>
+        <a href="https://lawschool.konkuk.ac.kr" target="_blank" rel="noopener" class="logo-card" data-logo="konkuk">
+          <span class="name">건국대</span></a>
+        <a href="https://lawschool.hufs.ac.kr" target="_blank" rel="noopener" class="logo-card" data-logo="hufs">
+          <span class="name">한국외대</span></a>
+        <a href="https://lawschool.uos.ac.kr" target="_blank" rel="noopener" class="logo-card" data-logo="uos">
+          <span class="name">서울시립대</span></a>
+        <a href="https://lawschool.knu.ac.kr" target="_blank" rel="noopener" class="logo-card" data-logo="knu">
+          <span class="name">경북대</span></a>
+        <a href="https://law.pusan.ac.kr" target="_blank" rel="noopener" class="logo-card" data-logo="pnu">
+          <span class="name">부산대</span></a>
+        <a href="https://lawschool.donga.ac.kr" target="_blank" rel="noopener" class="logo-card" data-logo="dau">
+          <span class="name">동아대</span></a>
+        <a href="https://lawschool.jnu.ac.kr" target="_blank" rel="noopener" class="logo-card" data-logo="jnu">
+          <span class="name">전남대</span></a>
+        <a href="https://lawschool.jbnu.ac.kr" target="_blank" rel="noopener" class="logo-card" data-logo="jbnu">
+          <span class="name">전북대</span></a>
+        <a href="https://lawschool.cnu.ac.kr" target="_blank" rel="noopener" class="logo-card" data-logo="cnu">
+          <span class="name">충남대</span></a>
+        <a href="https://lawschool.chungbuk.ac.kr" target="_blank" rel="noopener" class="logo-card" data-logo="cbnu">
+          <span class="name">충북대</span></a>
+        <a href="https://lawschool.kangwon.ac.kr" target="_blank" rel="noopener" class="logo-card" data-logo="kangwon">
+          <span class="name">강원대</span></a>
+        <a href="https://lawschool.yu.ac.kr" target="_blank" rel="noopener" class="logo-card" data-logo="yu">
+          <span class="name">영남대</span></a>
+        <a href="https://lawschool.wku.ac.kr" target="_blank" rel="noopener" class="logo-card" data-logo="wku">
+          <span class="name">원광대</span></a>
+        <a href="https://lawschool.inha.ac.kr" target="_blank" rel="noopener" class="logo-card" data-logo="inha">
+          <span class="name">인하대</span></a>
+        <a href="https://lawschool.ajou.ac.kr" target="_blank" rel="noopener" class="logo-card" data-logo="ajou">
+          <span class="name">아주대</span></a>
+        <a href="https://lawschool.jejunu.ac.kr" target="_blank" rel="noopener" class="logo-card" data-logo="jeju">
+          <span class="name">제주대</span></a>
       </div>
     </div>
   </div>
 </section>
 
 <footer>
-  <div class="foot-inner">
-    <div class="foot-top">
-      <div class="foot-brand">
-        <svg viewBox="0 0 280 70" xmlns="http://www.w3.org/2000/svg" aria-label="KLAI">
-          <g font-family="'Noto Sans KR','Arial Black',sans-serif" font-weight="900" font-size="42" letter-spacing="-1.2">
-            <text x="6" y="40" fill="#D02638">K</text>
-            <text x="34" y="40" fill="#F5EFE4">LAI</text>
-          </g>
-          <path d="M 88 32 Q 116 22 142 36" fill="none" stroke="#D02638" stroke-width="1.4" stroke-linecap="round" opacity="0.9"/>
-          <text x="6" y="62" font-family="'Noto Sans KR',sans-serif" font-weight="700" font-size="17" letter-spacing="3" fill="#F5EFE4">한국법학진흥원</text>
-        </svg>
-        <p>
-          법학의 대중화와 학습 표준 정립을 위해 설립된 비영리 학술 기관.
-          부속 연수원 운영, 법학경시대회 주최, 학술·출판·연구 사업을 수행합니다.
-        </p>
-      </div>
-      <div class="foot-col">
-        <h5>Navigation</h5>
-        <ul>
-          <li><a href="#about">진흥원 소개</a></li>
-          <li><a href="#twin">부속·후원</a></li>
-          <li><a href="https://klaiedu.com" target="_blank" rel="noopener">연수원 ↗</a></li>
-          <li><a href="https://lawtest.or.kr" target="_blank" rel="noopener">법학경시대회 ↗</a></li>
-        </ul>
-      </div>
-      <div class="foot-col">
-        <h5>Contact</h5>
-        <ul>
-          <li><a href="mailto:info@lawtest.co.kr">info@lawtest.co.kr</a></li>
-          <li>광화문 변호사회관</li>
-          <li>평일 10:00–17:00</li>
-        </ul>
-      </div>
+  <div class="foot">
+    <div class="foot-left">
+      <img src="assets/klai_logo_inverse.svg" alt="한국법학진흥원" class="foot-logo">
     </div>
-    <div class="legal">
-      <div class="row"><b>기관명</b><span>한국법학진흥원 (비영리 단체)</span></div>
-      <div class="row"><b>대표자</b><span>김민규</span></div>
-      <div class="row"><b>사업자등록번호</b><span>110-82-89098</span></div>
-      <div class="row"><b>소재지</b><span>서울 종로구 새문안로5길 13, 지하1층 29호 (당주동, 변호사회관)</span></div>
-      <div class="row"><b>설립일</b><span>2024.11.26</span></div>
-      <div class="row"><b>부속 시설</b><span>한국법학진흥원 연수원 (klaiedu.com)</span></div>
+    <div class="foot-right">
+      info@klai.or.kr<br>
+      서울 종로구 광화문 변호사회관 29호<br>
+      평일 10:00–17:00
     </div>
-    <div class="foot-bottom">
-      <span>© 2026 Korea Law Advancement Institute. All Rights Reserved.</span>
-      <span class="est">EST · MMXXIV · 韓國法學振興院</span>
+  </div>
+  <div class="foot-bottom">
+    <span>© 2026 한국법학진흥원 (KLAI) · 고유번호 110-82-89098</span>
+    <div class="links">
+      <a href="#">개인정보처리방침</a>
+      <a href="#">이메일 무단수집 거부</a>
     </div>
   </div>
 </footer>
