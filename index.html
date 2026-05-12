@@ -4,1945 +4,406 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>한국법학진흥원 | Korea Law Advancement Institute</title>
-<meta name="description" content="한국법학진흥원(KLAI)은 법학 교육의 대중화와 학습 표준 정립을 위해 설립된 교육청 등록 평생학습기관입니다. 비학위과정·전문가 과정·법학경시대회 후원 사업을 운영합니다.">
-<meta name="keywords" content="한국법학진흥원, KLAI, 평생학습기관, 법학 교육, 법학개론, 헌법연습, 민법연습, 형법연습, 법령정보분석사, 회생, 파산, 법학경시대회">
-<meta name="author" content="한국법학진흥원">
+<meta name="description" content="한국법학진흥원(KLAI)은 법학의 대중화와 학습 표준 정립을 위해 설립된 비영리 학술 기관입니다.">
 <meta name="theme-color" content="#5C1F2C">
 <meta property="og:title" content="한국법학진흥원 | Korea Law Advancement Institute">
-<meta property="og:description" content="법학 교육의 대중화와 학습 표준 정립 · 교육청 등록 평생학습기관">
+<meta property="og:description" content="법학의 대중화와 학습 표준 정립을 위한 비영리 학술 기관">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://klai.or.kr/">
 <meta property="og:locale" content="ko_KR">
-<meta property="og:site_name" content="한국법학진흥원">
 <link rel="canonical" href="https://klai.or.kr/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700;900&family=Noto+Sans+KR:wght@300;400;500;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700;900&family=Noto+Sans+KR:wght@300;400;500;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
 <style>
   :root{
-    --ink: #1F1714;
-    --ink-soft: #3A2E28;
-    --ink-muted: #6B5B52;
-    --bg: #F5EFE4;
-    --bg-soft: #ECE3D2;
-    --bg-deep: #E5D9C2;
-    --paper: #FBF7EE;
-    --wine: #5C1F2C;
-    --wine-dark: #3F1219;
-    --wine-deep: #2A0B11;
-    --gold: #A8843E;
-    --gold-soft: #C8A968;
-    --rule: #C8B89A;
-    --rule-soft: #DCCFB6;
+    --ink:#1F1714; --ink-soft:#3A2E28; --ink-muted:#6B5B52;
+    --bg:#F5EFE4; --paper:#FBF7EE;
+    --wine:#5C1F2C; --wine-dark:#3F1219; --wine-deep:#2A0B11;
+    --gold:#A8843E; --gold-soft:#C8A968;
+    --rule:#C8B89A; --rule-soft:#DCCFB6;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
   body{
-    font-family:'Noto Sans KR', system-ui, sans-serif;
-    background:var(--bg);
-    color:var(--ink);
-    font-weight:400;
-    line-height:1.7;
-    font-size:15px;
+    font-family:'Noto Sans KR',system-ui,sans-serif;
+    background:var(--bg); color:var(--ink); line-height:1.7; font-size:15px;
     -webkit-font-smoothing:antialiased;
-    -moz-osx-font-smoothing:grayscale;
-    overflow-x:hidden;
   }
-  .serif{font-family:'Noto Serif KR', serif}
-  .latin{font-family:'Cormorant Garamond', serif; font-style:italic; letter-spacing:0.02em}
-  .latin-up{font-family:'Cormorant Garamond', serif; letter-spacing:0.14em; text-transform:uppercase}
-  .mono{font-family:'Inter', sans-serif; letter-spacing:0.1em; text-transform:uppercase; font-size:11px; font-weight:500}
-
-  a{color:inherit; text-decoration:none}
-  img{max-width:100%; display:block}
-  button{font-family:inherit; cursor:pointer}
-
-  /* ── Skip link ── */
-  .skip{position:absolute; left:-9999px; top:0; background:var(--wine); color:#fff; padding:8px 12px; z-index:1000}
-  .skip:focus{left:8px; top:8px}
-
-  /* ── Announcement bar ── */
-  .annc{
-    background:var(--wine-deep);
-    color:#E8DDC4;
-    font-size:12px;
-    letter-spacing:0.04em;
-    padding:9px 0;
-    border-bottom:1px solid rgba(168,132,62,0.25);
-  }
-  .annc .inner{
-    max-width:1280px; margin:0 auto; padding:0 28px;
-    display:flex; justify-content:space-between; align-items:center; gap:20px;
-    flex-wrap:wrap;
-  }
-  .annc .left{display:flex; align-items:center; gap:10px}
-  .annc .badge{
-    color:var(--gold-soft); font-family:'Cormorant Garamond', serif;
-    letter-spacing:0.18em; font-size:11px; padding:2px 8px;
-    border:1px solid rgba(168,132,62,0.5);
-    text-transform:uppercase;
-  }
-  .annc .right{display:flex; gap:18px; font-size:11px; letter-spacing:0.08em}
-  .annc .right a{opacity:0.85}
-  .annc .right a:hover{color:var(--gold-soft); opacity:1}
+  a{color:inherit;text-decoration:none}
 
   /* ── Header ── */
-  header.site{
-    background:var(--paper);
-    border-bottom:1px solid var(--rule);
-    position:relative;
-  }
-  header.site::before{
+  header{background:var(--paper); border-bottom:1px solid var(--rule); position:relative}
+  header::after{
     content:''; position:absolute; left:0; right:0; bottom:0; height:3px;
-    background:linear-gradient(90deg, var(--wine) 0%, var(--wine) 38%, var(--gold) 38%, var(--gold) 41%, var(--wine) 41%, var(--wine) 100%);
+    background:linear-gradient(90deg,var(--wine) 0,var(--wine) 38%,var(--gold) 38%,var(--gold) 41%,var(--wine) 41%,var(--wine) 100%);
   }
-  .head-inner{
-    max-width:1280px; margin:0 auto; padding:18px 28px;
-    display:flex; justify-content:space-between; align-items:center;
-    gap:24px;
+  .head{
+    max-width:1180px; margin:0 auto; padding:20px 28px;
+    display:flex; justify-content:space-between; align-items:center; gap:24px;
   }
-  .brand{display:flex; align-items:center; gap:16px}
-  .logo-img{height:54px; width:216px; display:block; flex-shrink:0}
-  .brand-text{display:flex; flex-direction:column; line-height:1.2; gap:3px}
-  .brand-tag{
-    font-family:'Noto Serif KR', serif;
-    font-size:11.5px; letter-spacing:0.18em;
-    color:var(--wine); font-weight:600;
+  .brand svg{height:54px; width:auto; display:block}
+  nav ul{list-style:none; display:flex; gap:4px; align-items:center}
+  nav a{
+    padding:10px 16px; font-size:14px; font-weight:500; color:var(--ink-soft);
+    border-bottom:2px solid transparent; transition:all .2s;
   }
-  .brand-en-sub{
-    font-family:'Cormorant Garamond', serif; font-style:italic;
-    font-size:12px; letter-spacing:0.12em; color:var(--ink-muted);
+  nav a:hover{color:var(--wine); border-bottom-color:var(--gold)}
+  nav a.cta{
+    margin-left:10px; padding:9px 18px;
+    background:var(--wine); color:var(--paper); border:1px solid var(--wine); font-size:13.5px;
   }
-  nav.main ul{
-    display:flex; list-style:none; gap:2px; align-items:center;
-  }
-  nav.main a{
-    display:inline-block; padding:9px 12px;
-    font-size:13.5px; font-weight:500; color:var(--ink-soft);
-    border-bottom:2px solid transparent;
-    transition:color 0.2s, border-color 0.2s;
-  }
-  nav.main a:hover{color:var(--wine); border-bottom-color:var(--gold)}
-  nav.main a.cta{
-    margin-left:10px; padding:8px 16px;
-    background:var(--wine); color:#F5EFE4;
-    border:1px solid var(--wine);
-    font-size:13px;
-  }
-  nav.main a.cta:hover{background:var(--wine-dark); border-color:var(--wine-dark); border-bottom-color:var(--wine-dark)}
-
-  /* mobile menu button */
-  .menu-btn{
-    display:none;
-    background:transparent; border:1px solid var(--ink-soft);
-    padding:8px 14px; font-size:13px; color:var(--ink-soft);
-    letter-spacing:0.04em;
-  }
-  .menu-btn:hover{background:var(--ink); color:var(--paper); border-color:var(--ink)}
+  nav a.cta:hover{background:var(--wine-dark); border-color:var(--wine-dark); border-bottom-color:var(--wine-dark)}
 
   /* ── Hero ── */
-  .hero{
-    background:var(--bg);
-    padding:70px 0 100px;
-    position:relative; overflow:hidden;
-  }
+  .hero{padding:90px 0 110px; position:relative; overflow:hidden}
   .hero::before{
-    content:'振興'; position:absolute;
-    right:-30px; top:30px;
-    font-family:'Noto Serif KR', serif; font-weight:900;
-    font-size:340px; line-height:1; color:rgba(92,31,44,0.045);
-    letter-spacing:-0.05em; pointer-events:none;
-    user-select:none;
+    content:'振興'; position:absolute; right:-40px; top:20px;
+    font-family:'Noto Serif KR',serif; font-weight:900;
+    font-size:360px; line-height:1; color:rgba(92,31,44,.045);
+    letter-spacing:-0.05em; pointer-events:none; user-select:none;
   }
-  .hero-inner{
-    max-width:1280px; margin:0 auto; padding:0 28px;
-    display:grid; grid-template-columns:1.35fr 1fr; gap:80px; align-items:end;
-    position:relative; z-index:1;
-  }
-  .vol-label{
-    display:inline-flex; align-items:center; gap:14px;
-    margin-bottom:26px;
-  }
-  .vol-label .line{width:48px; height:1px; background:var(--wine)}
-  .vol-label .text{
-    font-family:'Cormorant Garamond', serif; font-style:italic;
+  .hero-inner{max-width:900px; margin:0 auto; padding:0 28px; position:relative; z-index:1}
+  .hero-label{display:inline-flex; align-items:center; gap:14px; margin-bottom:30px}
+  .hero-label .line{width:48px; height:1px; background:var(--wine)}
+  .hero-label .text{
+    font-family:'Cormorant Garamond',serif; font-style:italic;
     color:var(--wine); font-size:15px; letter-spacing:0.08em;
   }
   .hero h1{
-    font-family:'Noto Serif KR', serif;
-    font-weight:700;
-    font-size:clamp(34px, 5vw, 60px);
-    line-height:1.2;
-    color:var(--ink);
-    letter-spacing:-0.015em;
-    margin-bottom:22px;
+    font-family:'Noto Serif KR',serif; font-weight:700;
+    font-size:clamp(36px, 5.4vw, 60px); line-height:1.2;
+    letter-spacing:-0.015em; margin-bottom:28px;
   }
-  .hero h1 .accent{
-    color:var(--wine); position:relative;
+  .hero h1 .accent{color:var(--wine)}
+  .hero-en{
+    font-family:'Cormorant Garamond',serif; font-style:italic;
+    font-size:22px; color:var(--ink-muted); margin-bottom:34px;
   }
-  .hero h1 .accent::after{
-    content:''; position:absolute; left:0; right:0; bottom:-2px;
-    height:2px; background:var(--gold);
-    transform:scaleX(0); transform-origin:left;
-    animation:underline 1.2s 0.4s forwards;
+  .hero-text{
+    font-size:16px; line-height:1.95; color:var(--ink-soft);
+    max-width:680px; margin-bottom:42px;
   }
-  @keyframes underline{to{transform:scaleX(1)}}
-  .hero .subtitle-en{
-    font-family:'Cormorant Garamond', serif;
-    font-size:21px; font-style:italic; color:var(--ink-muted);
-    margin-bottom:30px; letter-spacing:0.01em;
-  }
-  .hero .manifesto{
-    font-size:15.5px; line-height:1.9; color:var(--ink-soft);
-    max-width:570px; margin-bottom:34px;
-  }
-  .hero .manifesto strong{color:var(--wine-dark); font-weight:600}
-  .hero-actions{display:flex; gap:14px; flex-wrap:wrap}
+  .hero-text strong{color:var(--wine-dark); font-weight:600}
+  .hero-cta{display:flex; gap:14px; flex-wrap:wrap}
   .btn{
     display:inline-flex; align-items:center; gap:10px;
-    padding:13px 26px; font-size:14px; font-weight:500;
-    letter-spacing:0.02em; transition:all 0.25s;
-    cursor:pointer; border:1px solid transparent;
+    padding:14px 28px; font-size:14px; font-weight:500;
+    letter-spacing:0.02em; border:1px solid transparent; transition:all .25s;
   }
-  .btn-primary{
-    background:var(--wine); color:#F5EFE4;
-    border-color:var(--wine);
-  }
+  .btn .arr{font-family:'Cormorant Garamond',serif; font-size:18px}
+  .btn-primary{background:var(--wine); color:var(--paper); border-color:var(--wine)}
   .btn-primary:hover{background:var(--wine-dark); border-color:var(--wine-dark); transform:translateY(-2px)}
-  .btn-ghost{
-    background:transparent; color:var(--ink);
-    border-color:var(--ink-soft);
-  }
-  .btn-ghost:hover{background:var(--ink); color:#F5EFE4; transform:translateY(-2px)}
-  .btn .arr{font-family:'Cormorant Garamond', serif; font-size:18px}
+  .btn-ghost{color:var(--ink); border-color:var(--ink-soft)}
+  .btn-ghost:hover{background:var(--ink); color:var(--paper); transform:translateY(-2px)}
 
-  .hero-trust{
-    margin-top:34px; display:flex; gap:24px; flex-wrap:wrap;
-    align-items:center;
+  /* ── About ── */
+  .about{
+    background:var(--paper); border-top:1px solid var(--rule); border-bottom:1px solid var(--rule);
+    padding:90px 0;
   }
-  .trust-item{
-    display:flex; align-items:center; gap:10px;
-    padding:8px 14px; background:rgba(168,132,62,0.08);
-    border:1px solid rgba(168,132,62,0.25);
-    font-size:12px; color:var(--ink-soft); letter-spacing:0.02em;
+  .about-inner{
+    max-width:1180px; margin:0 auto; padding:0 28px;
+    display:grid; grid-template-columns:1fr 1.5fr; gap:80px;
   }
-  .trust-item .dot{
-    width:6px; height:6px; background:var(--wine); border-radius:50%;
-  }
-
-  /* Hero right column */
-  .hero-card{
-    background:var(--paper);
-    border:1px solid var(--rule);
-    padding:0;
-    position:relative;
-    box-shadow:0 1px 0 var(--rule-soft), 0 30px 80px -40px rgba(60,30,20,0.25);
-  }
-  .hero-card::before{
-    content:''; position:absolute; top:8px; left:8px; right:8px; bottom:8px;
-    border:1px solid var(--rule-soft); pointer-events:none;
-  }
-  .hero-card .top{
-    padding:22px 26px 16px;
-    border-bottom:1px solid var(--rule);
-    display:flex; justify-content:space-between; align-items:center;
-  }
-  .hero-card .top .label{
-    font-family:'Cormorant Garamond', serif; font-style:italic;
-    color:var(--wine); font-size:14px; letter-spacing:0.08em;
-  }
-  .hero-card .top .vol{
-    font-family:'Cormorant Garamond', serif;
-    color:var(--ink-muted); font-size:12px; letter-spacing:0.18em;
-    text-transform:uppercase;
-  }
-  .hero-seal-panel{
-    background:#0F0608; padding:30px 24px 22px;
-    border-bottom:1px solid var(--rule);
-    text-align:center; position:relative;
-  }
-  .hero-seal-panel::before{
-    content:''; position:absolute; top:8px; left:8px; right:8px; bottom:14px;
-    border:1px solid rgba(168,132,62,0.3); pointer-events:none;
-  }
-  .hero-seal-img{
-    max-width:90%; height:auto; margin:0 auto; display:block;
-    position:relative; z-index:1;
-  }
-  .hero-seal-est{
-    margin-top:14px; position:relative; z-index:1;
-    font-family:'Cormorant Garamond', serif; font-style:italic;
-    color:var(--gold-soft); font-size:11.5px; letter-spacing:0.18em;
-  }
-  .hero-card .body{padding:24px 26px 26px; position:relative}
-  .hero-card .meta{
-    display:grid; grid-template-columns:1fr 1fr; gap:14px 20px;
-    padding-top:2px;
-  }
-  .hero-card .meta .item{
-    text-align:center; padding:0 4px;
-  }
-  .hero-card .meta .k{
-    font-size:10.5px; letter-spacing:0.12em; color:var(--ink-muted);
-    text-transform:uppercase; margin-bottom:4px;
-  }
-  .hero-card .meta .v{
-    font-family:'Noto Serif KR', serif; font-weight:600;
-    font-size:13.5px; color:var(--ink);
-  }
-
-  /* ── Section base ── */
-  section{padding:90px 0; position:relative}
-  .container{max-width:1280px; margin:0 auto; padding:0 28px}
-  .sec-head{margin-bottom:50px}
-  .sec-eyebrow{
+  .eyebrow{
     display:inline-flex; align-items:center; gap:12px;
-    font-family:'Cormorant Garamond', serif;
+    font-family:'Cormorant Garamond',serif;
     color:var(--wine); font-size:14px; letter-spacing:0.18em;
-    text-transform:uppercase; margin-bottom:16px;
+    text-transform:uppercase; margin-bottom:18px;
   }
-  .sec-eyebrow::before{
-    content:''; width:32px; height:1px; background:var(--wine);
-  }
-  .sec-eyebrow .num{
-    font-style:italic; color:var(--gold); font-size:16px;
-    margin-right:4px;
-  }
+  .eyebrow::before{content:''; width:32px; height:1px; background:var(--wine)}
   .sec-title{
-    font-family:'Noto Serif KR', serif; font-weight:700;
-    font-size:clamp(26px, 3.4vw, 40px); line-height:1.25;
-    color:var(--ink); letter-spacing:-0.01em;
-    max-width:800px;
+    font-family:'Noto Serif KR',serif; font-weight:700;
+    font-size:clamp(26px, 3.4vw, 36px); line-height:1.3;
+    letter-spacing:-0.01em;
   }
   .sec-title .gold{color:var(--wine)}
-  .sec-sub{
-    margin-top:16px; font-size:15px; color:var(--ink-soft);
-    line-height:1.85; max-width:720px;
+  .about-info{margin-top:34px; display:grid; grid-template-columns:1fr 1fr; gap:24px}
+  .info{border-top:1px solid var(--ink); padding-top:14px}
+  .info .k{
+    font-family:'Cormorant Garamond',serif; font-style:italic;
+    color:var(--wine); font-size:13px; letter-spacing:0.12em; margin-bottom:6px;
   }
+  .info .v{font-family:'Noto Serif KR',serif; font-weight:600; font-size:15px}
+  .about-text p{margin-bottom:20px; color:var(--ink-soft); font-size:15px; line-height:1.95}
+  .about-text p strong{color:var(--wine-dark); font-weight:600}
 
-  /* ── About / 진흥원 소개 ── */
-  .about{background:var(--paper); border-top:1px solid var(--rule); border-bottom:1px solid var(--rule)}
-  .about-tabs{
-    display:flex; gap:0; margin-bottom:44px;
-    border-bottom:1px solid var(--rule);
-    overflow-x:auto;
-  }
-  .about-tabs button{
-    padding:14px 22px; background:transparent; border:none;
-    font-size:14px; font-weight:500; color:var(--ink-muted);
-    letter-spacing:0.04em; border-bottom:2px solid transparent;
-    margin-bottom:-1px; white-space:nowrap;
-    transition:all 0.2s;
-  }
-  .about-tabs button:hover{color:var(--wine)}
-  .about-tabs button.active{
-    color:var(--wine); border-bottom-color:var(--wine);
-    font-weight:600;
-  }
-  .about-tabs button .latin{
-    font-family:'Cormorant Garamond', serif; font-style:italic;
-    color:var(--gold); margin-right:8px; font-size:13px;
-  }
-
-  .about-panel{display:none}
-  .about-panel.active{display:block; animation:fadeIn 0.4s ease}
-  @keyframes fadeIn{from{opacity:0; transform:translateY(8px)} to{opacity:1; transform:translateY(0)}}
-
-  /* greeting */
-  .greeting{
-    display:grid; grid-template-columns:300px 1fr; gap:60px;
-    align-items:start;
-  }
-  .greeting-portrait{
-    background:var(--bg);
-    border:1px solid var(--rule);
-    padding:24px;
-    position:relative;
-  }
-  .greeting-portrait::before{
-    content:''; position:absolute; top:8px; left:8px; right:8px; bottom:8px;
-    border:1px solid var(--rule-soft); pointer-events:none;
-  }
-  .greeting-portrait .silhouette{
-    width:100%; aspect-ratio:4/5; background:var(--paper);
-    border:1px solid var(--rule-soft);
-    overflow:hidden; position:relative;
-  }
-  .director-photo{
-    width:100%; height:100%; object-fit:cover; display:block;
-  }
-  .greeting-portrait .name{
-    font-family:'Noto Serif KR', serif; font-weight:700;
-    font-size:17px; text-align:center; margin-top:18px;
-    color:var(--wine-dark);
-  }
-  .greeting-portrait .title{
-    font-family:'Cormorant Garamond', serif; font-style:italic;
-    font-size:13px; text-align:center; color:var(--ink-muted);
-    letter-spacing:0.04em; margin-top:4px;
-  }
-  .greeting-text h3{
-    font-family:'Noto Serif KR', serif; font-weight:700;
-    font-size:24px; color:var(--ink); margin-bottom:24px;
-    line-height:1.4;
-  }
-  .greeting-text p{margin-bottom:18px; color:var(--ink-soft); font-size:15px; line-height:1.95}
-  .greeting-text p strong{color:var(--wine-dark); font-weight:600}
-  .greeting-sign{
-    margin-top:32px; padding-top:24px; border-top:1px solid var(--rule);
-    font-family:'Noto Serif KR', serif;
-  }
-  .greeting-sign .name{font-size:17px; font-weight:700; color:var(--ink)}
-  .greeting-sign .role{
-    font-family:'Cormorant Garamond', serif; font-style:italic;
-    color:var(--ink-muted); font-size:14px; margin-top:4px; letter-spacing:0.04em;
-  }
-
-  /* purpose */
-  .purpose-grid{
-    display:grid; grid-template-columns:1fr 1.4fr; gap:60px;
-    align-items:start;
-  }
-  .purpose-left .meta-block{
-    border-top:1px solid var(--ink); padding-top:16px; margin-bottom:28px;
-  }
-  .purpose-left .meta-block .k{
-    font-family:'Cormorant Garamond', serif;
-    font-size:13px; letter-spacing:0.16em; text-transform:uppercase;
-    color:var(--wine); margin-bottom:6px;
-  }
-  .purpose-left .meta-block .v{
-    font-family:'Noto Serif KR', serif; font-weight:600;
-    font-size:16px; color:var(--ink);
-  }
-  .purpose-text p{margin-bottom:18px; color:var(--ink-soft); font-size:15px; line-height:1.95}
-  .purpose-text p strong{color:var(--wine-dark); font-weight:600}
-  .pull-quote{
-    border-left:2px solid var(--gold); padding:6px 0 6px 22px;
-    margin:26px 0; font-family:'Noto Serif KR', serif;
-    font-size:17px; line-height:1.7; color:var(--ink); font-weight:500;
-  }
-  .pull-quote .src{
-    display:block; margin-top:10px; font-family:'Cormorant Garamond', serif;
-    font-style:italic; font-size:13px; color:var(--ink-muted); font-weight:400;
-  }
-
-  /* history */
-  .timeline{
-    border-top:1px solid var(--ink);
-    padding-top:36px;
-    display:grid; grid-template-columns:repeat(4, 1fr); gap:0;
-  }
-  .tl-item{
-    position:relative; padding:0 22px 0 0;
-    border-right:1px solid var(--rule-soft);
-  }
-  .tl-item:last-child{border-right:none}
-  .tl-item::before{
-    content:''; position:absolute; left:0; top:-40px;
-    width:8px; height:8px; background:var(--wine);
-    transform:rotate(45deg);
-  }
-  .tl-year{
-    font-family:'Cormorant Garamond', serif; font-size:34px;
-    color:var(--wine); letter-spacing:0.04em; line-height:1; margin-bottom:12px;
-    font-weight:500;
-  }
-  .tl-items{list-style:none}
-  .tl-items li{
-    font-size:13px; color:var(--ink-soft); line-height:1.7;
-    margin-bottom:10px; padding-left:14px; position:relative;
-  }
-  .tl-items li::before{
-    content:'·'; position:absolute; left:0; color:var(--gold);
-    font-weight:700; font-size:16px;
-  }
-  .tl-items li strong{color:var(--ink); font-weight:600}
-  .tl-items li .date{
-    font-family:'Cormorant Garamond', serif; color:var(--wine);
-    font-size:12px; letter-spacing:0.06em; margin-right:6px;
-  }
-
-  /* org */
-  .org-tree{margin-top:8px}
-  .org-top{
-    text-align:center; margin-bottom:30px;
-  }
-  .org-top .box{
-    display:inline-block; padding:14px 28px;
-    background:var(--wine); color:var(--paper);
-    font-family:'Noto Serif KR', serif; font-weight:600;
-    letter-spacing:0.02em; font-size:16px;
-  }
-  .org-top .below{
-    width:1px; height:24px; background:var(--rule); margin:0 auto;
-  }
-  .org-divisions{
-    display:grid; grid-template-columns:repeat(5, 1fr); gap:1px;
-    background:var(--rule); border:1px solid var(--rule);
-  }
-  .org-cell{
-    background:var(--paper); padding:20px 16px;
-    text-align:center;
-  }
-  .org-cell .num{
-    font-family:'Cormorant Garamond', serif; font-style:italic;
-    color:var(--gold); font-size:13px; letter-spacing:0.08em;
-    margin-bottom:8px;
-  }
-  .org-cell .name{
-    font-family:'Noto Serif KR', serif; font-weight:600;
-    font-size:15px; color:var(--ink); margin-bottom:6px;
-  }
-  .org-cell .role{
-    font-size:11.5px; color:var(--ink-muted); line-height:1.6;
-  }
-
-  /* location */
-  .location-grid{
-    display:grid; grid-template-columns:1.4fr 1fr; gap:40px;
-    align-items:start;
-  }
-  .location-map{
-    background:var(--bg);
-    border:1px solid var(--rule);
-    aspect-ratio:4/3;
-    position:relative; overflow:hidden;
-  }
-  .location-map svg{width:100%; height:100%}
-  .location-info .info-row{
-    display:grid; grid-template-columns:80px 1fr; gap:16px;
-    padding:16px 0; border-bottom:1px solid var(--rule-soft);
-    font-size:14px;
-  }
-  .location-info .info-row:first-child{border-top:1px solid var(--ink); padding-top:18px}
-  .location-info .info-row .k{
-    font-family:'Cormorant Garamond', serif; color:var(--wine);
-    letter-spacing:0.12em; font-size:12px; text-transform:uppercase;
-    padding-top:2px;
-  }
-  .location-info .info-row .v{color:var(--ink); line-height:1.7}
-  .location-info .info-row .v strong{font-family:'Noto Serif KR', serif; font-weight:600}
-
-  /* ── Courses (비학위 / 학점은행 / 전문가) ── */
-  .courses{background:var(--bg)}
-  .course-grid{
-    display:grid; grid-template-columns:repeat(4, 1fr); gap:0;
-    border-top:1px solid var(--ink); border-left:1px solid var(--rule);
-    margin-top:8px;
-  }
-  .course{
-    background:var(--paper);
-    padding:34px 26px 36px;
-    border-right:1px solid var(--rule);
-    border-bottom:1px solid var(--rule);
-    position:relative;
-    transition:background 0.3s;
-    display:flex; flex-direction:column;
-  }
-  .course:hover{background:#FDFAF2}
-  .course.featured{
-    background:linear-gradient(180deg, #FBF3DF 0%, var(--paper) 100%);
-  }
-  .course.featured::after{
-    content:'⭐ 대표 강좌'; position:absolute; top:14px; right:14px;
-    font-size:10.5px; padding:3px 9px; background:var(--wine); color:var(--paper);
-    letter-spacing:0.08em; font-family:'Inter', sans-serif; font-weight:500;
-  }
-  .course .num{
-    font-family:'Cormorant Garamond', serif; font-style:italic;
-    font-size:44px; color:var(--gold); line-height:1;
-    margin-bottom:16px; font-weight:400;
-  }
-  .course .lbl{
-    font-family:'Cormorant Garamond', serif;
-    font-size:11px; letter-spacing:0.2em; color:var(--ink-muted);
-    text-transform:uppercase; margin-bottom:12px;
-  }
-  .course h3{
-    font-family:'Noto Serif KR', serif; font-weight:700;
-    font-size:20px; color:var(--ink); margin-bottom:12px;
-    line-height:1.4;
-  }
-  .course p{
-    color:var(--ink-soft); font-size:13.5px; line-height:1.8;
-    margin-bottom:18px; flex:1;
-  }
-  .course .specs{display:flex; flex-direction:column; gap:6px; margin-bottom:14px}
-  .course .spec{
-    display:flex; gap:10px; font-size:12px; color:var(--ink-muted);
-  }
-  .course .spec .k{
-    font-family:'Cormorant Garamond', serif; color:var(--gold);
-    letter-spacing:0.06em; min-width:54px; font-size:11px; text-transform:uppercase;
-  }
-  .course .tags{display:flex; gap:5px; flex-wrap:wrap}
-  .course .tag{
-    font-size:10.5px; padding:3px 8px; background:var(--bg-soft);
-    color:var(--ink-soft); border:1px solid var(--rule-soft);
-    letter-spacing:0.02em;
-  }
-  .course-fee{
-    margin-top:14px; padding-top:12px; border-top:1px dotted var(--rule);
-    display:flex; gap:10px; align-items:baseline;
-    font-size:12px;
-  }
-  .course-fee .fee-k{
-    font-family:'Cormorant Garamond', serif; font-style:italic;
-    color:var(--gold); letter-spacing:0.08em; font-size:11px;
-    text-transform:uppercase;
-  }
-  .course-fee .fee-v{color:var(--ink-soft); font-weight:500}
-  .course-btn{
-    margin-top:14px; display:flex; justify-content:space-between; align-items:center;
-    padding:10px 14px; background:var(--wine); color:#F5EFE4;
-    font-size:13px; font-weight:500; letter-spacing:0.02em;
-    border:1px solid var(--wine);
-    transition:all 0.2s;
-  }
-  .course-btn:hover{background:var(--wine-dark); border-color:var(--wine-dark); padding-left:18px}
-  .course-btn .arr{font-family:'Cormorant Garamond', serif; font-size:16px}
-
-  /* credit (학점은행제) */
-  .credit{background:var(--paper); border-top:1px solid var(--rule); border-bottom:1px solid var(--rule)}
-  .credit-wrap{
-    display:grid; grid-template-columns:1fr 1fr; gap:60px;
-    align-items:center;
-  }
-  .credit-stamp{
-    border:2px solid var(--wine); padding:60px 50px;
-    text-align:center; position:relative;
-    background:var(--bg);
-  }
-  .credit-stamp::before{
-    content:''; position:absolute; top:8px; left:8px; right:8px; bottom:8px;
-    border:1px solid var(--wine);
-  }
-  .credit-stamp .seal{
-    width:100px; height:100px; margin:0 auto 20px;
-    border:2px solid var(--wine); border-radius:50%;
-    display:flex; align-items:center; justify-content:center;
-    font-family:'Noto Serif KR', serif; font-weight:700;
-    font-size:24px; color:var(--wine);
-    transform:rotate(-8deg);
-    letter-spacing:-0.02em;
-  }
-  .credit-stamp .label{
-    font-family:'Cormorant Garamond', serif; font-style:italic;
-    color:var(--wine); font-size:18px; letter-spacing:0.08em;
-    margin-bottom:10px;
-  }
-  .credit-stamp .kr{
-    font-family:'Noto Serif KR', serif; font-weight:700;
-    font-size:28px; color:var(--wine-dark);
-    letter-spacing:0.02em;
-  }
-  .credit-stamp .date{
-    margin-top:18px; font-family:'Cormorant Garamond', serif;
-    color:var(--ink-muted); font-size:13px; letter-spacing:0.1em;
-  }
-
-  /* ── Patronage ── */
-  .patronage{background:var(--bg)}
-  .patron-feature{
+  /* ── Twin cards ── */
+  .twin{padding:90px 0; background:var(--bg)}
+  .twin-inner{max-width:1180px; margin:0 auto; padding:0 28px}
+  .twin-head{text-align:center; margin-bottom:50px}
+  .twin-head .eyebrow{display:inline-flex}
+  .twin-head .eyebrow::before{display:none}
+  .twin-grid{display:grid; grid-template-columns:1fr 1fr; gap:24px}
+  .twin-card{
     background:var(--wine-deep); color:#E8DDC4;
-    padding:48px 50px; margin-bottom:30px;
-    display:grid; grid-template-columns:1fr 1.4fr; gap:50px;
-    align-items:center; position:relative; overflow:hidden;
+    padding:44px 38px 40px; transition:transform .3s, box-shadow .3s;
   }
-  .patron-feature::before{
-    content:'Olympiad'; position:absolute; right:-20px; bottom:-50px;
-    font-family:'Cormorant Garamond', serif; font-style:italic;
-    font-size:180px; color:rgba(168,132,62,0.05);
-    pointer-events:none; user-select:none; letter-spacing:0.04em;
+  .twin-card:hover{transform:translateY(-4px); box-shadow:0 30px 60px -30px rgba(60,30,20,.4)}
+  .twin-card.alt{background:var(--paper); color:var(--ink); border:1px solid var(--rule)}
+  .twin-card .lbl{
+    font-family:'Cormorant Garamond',serif; font-style:italic;
+    font-size:13px; letter-spacing:0.16em; margin-bottom:14px;
+    color:var(--gold-soft);
   }
-  .patron-feature .lbl{
-    font-family:'Cormorant Garamond', serif; font-style:italic;
-    color:var(--gold-soft); font-size:14px; letter-spacing:0.14em;
-    margin-bottom:14px; position:relative; z-index:1;
+  .twin-card.alt .lbl{color:var(--wine)}
+  .twin-card h3{
+    font-family:'Noto Serif KR',serif; font-weight:700;
+    font-size:26px; margin-bottom:6px; letter-spacing:-0.01em;
+    color:#F5EFE4;
   }
-  .patron-feature h3{
-    font-family:'Noto Serif KR', serif; font-weight:700;
-    font-size:30px; color:#F5EFE4; margin-bottom:8px;
-    letter-spacing:-0.01em; position:relative; z-index:1;
+  .twin-card.alt h3{color:var(--wine-dark)}
+  .twin-card .en{
+    font-family:'Cormorant Garamond',serif; font-style:italic;
+    font-size:15px; margin-bottom:20px;
+    color:var(--gold-soft);
   }
-  .patron-feature .en{
-    font-family:'Cormorant Garamond', serif; font-style:italic;
-    color:var(--gold-soft); font-size:18px; margin-bottom:18px;
-    position:relative; z-index:1;
+  .twin-card.alt .en{color:var(--ink-muted)}
+  .twin-card p{font-size:14px; line-height:1.85; margin-bottom:24px; color:#D4C5A3}
+  .twin-card.alt p{color:var(--ink-soft)}
+  .twin-card .link{
+    display:inline-flex; align-items:center; gap:10px;
+    padding:11px 20px; font-weight:500; font-size:13.5px;
+    letter-spacing:0.02em; transition:all .2s;
+    background:var(--gold); color:var(--wine-deep);
   }
-  .patron-feature .desc{font-size:14px; line-height:1.85; color:#D4C5A3; position:relative; z-index:1}
-  .patron-feature .right{position:relative; z-index:1}
-  .patron-feature .stat-grid{
-    display:grid; grid-template-columns:repeat(2, 1fr); gap:14px;
-  }
-  .patron-feature .stat{
-    padding:18px 20px; border:1px solid rgba(168,132,62,0.3);
-    background:rgba(168,132,62,0.06);
-  }
-  .patron-feature .stat .k{
-    font-family:'Cormorant Garamond', serif; font-style:italic;
-    color:var(--gold-soft); font-size:12px; letter-spacing:0.08em;
-    margin-bottom:6px;
-  }
-  .patron-feature .stat .v{
-    font-family:'Noto Serif KR', serif; font-weight:700;
-    color:#F5EFE4; font-size:20px; line-height:1.3;
-  }
-
-  .patron-logo-wrap{
-    display:inline-block; padding:12px 18px; margin-bottom:14px;
-    background:#F5EFE4; border:1px solid rgba(168,132,62,0.4);
-    position:relative; z-index:1;
-  }
-  .patron-logo{height:38px; width:auto; display:block}
-  .patron-feature .link{
-    display:inline-block; margin-top:20px;
-    padding:11px 22px; background:var(--gold); color:var(--wine-deep);
-    font-weight:600; font-size:13px; letter-spacing:0.04em;
-    transition:all 0.2s; position:relative; z-index:1;
-  }
-  .patron-feature .link:hover{background:var(--gold-soft); transform:translateY(-2px)}
-
-  .partner-grid{
-    display:grid; grid-template-columns:repeat(3, 1fr); gap:18px;
-  }
-  .partner{
-    background:var(--paper);
-    border:1px solid var(--rule);
-    padding:24px 22px;
-    position:relative;
-    transition:transform 0.25s, box-shadow 0.25s;
-  }
-  .partner:hover{transform:translateY(-2px); box-shadow:0 14px 30px -22px rgba(60,30,20,0.3)}
-  .partner .cat{
-    font-family:'Cormorant Garamond', serif;
-    font-size:10.5px; letter-spacing:0.22em; color:var(--gold);
-    text-transform:uppercase; margin-bottom:10px;
-  }
-  .partner h4{
-    font-family:'Noto Serif KR', serif; font-size:15px; font-weight:700;
-    color:var(--wine-dark); margin-bottom:3px; letter-spacing:0.01em;
-  }
-  .partner .en{
-    font-family:'Cormorant Garamond', serif; font-style:italic;
-    font-size:12px; color:var(--ink-muted); margin-bottom:12px;
-    letter-spacing:0.02em;
-  }
-  .partner p{
-    font-size:12.5px; color:var(--ink-soft); line-height:1.7;
-  }
-
-  /* ── Info (정보광장) ── */
-  .infohub{background:var(--paper); border-top:1px solid var(--rule); border-bottom:1px solid var(--rule)}
-  .info-cards{
-    display:grid; grid-template-columns:repeat(3, 1fr); gap:24px;
-  }
-  .info-card{
-    background:var(--bg);
-    border:1px solid var(--rule);
-    padding:36px 30px 32px;
-    position:relative;
-    transition:all 0.3s;
-  }
-  .info-card:hover{background:var(--paper); transform:translateY(-3px); box-shadow:0 20px 40px -28px rgba(60,30,20,0.3)}
-  .info-card .ico{
-    width:48px; height:48px; margin-bottom:18px;
-    display:flex; align-items:center; justify-content:center;
-    border:1px solid var(--wine);
-    color:var(--wine);
-  }
-  .info-card .lbl{
-    font-family:'Cormorant Garamond', serif;
-    font-size:11px; letter-spacing:0.22em; color:var(--gold);
-    text-transform:uppercase; margin-bottom:8px;
-  }
-  .info-card h4{
-    font-family:'Noto Serif KR', serif; font-weight:700;
-    font-size:20px; color:var(--ink); margin-bottom:12px;
-  }
-  .info-card p{
-    font-size:13.5px; color:var(--ink-soft); line-height:1.8;
-    margin-bottom:18px;
-  }
-  .info-card .link{
-    font-size:12px; font-weight:600; color:var(--wine);
-    letter-spacing:0.06em; border-bottom:1px solid var(--wine);
-    padding-bottom:2px; display:inline-block;
-  }
-  .info-card .link:hover{color:var(--wine-dark)}
-
-  /* ── Notice ── */
-  .notice{background:var(--bg)}
-  .notice-grid{
-    display:grid; grid-template-columns:1fr 1.6fr; gap:60px;
-    align-items:start;
-  }
-  .notice-item{
-    display:grid; grid-template-columns:90px 1fr 110px;
-    gap:20px; align-items:baseline;
-    padding:18px 0; border-bottom:1px solid var(--rule-soft);
-  }
-  .notice-item:first-child{border-top:1px solid var(--ink)}
-  .notice-item .tag{
-    font-family:'Cormorant Garamond', serif;
-    font-size:11.5px; letter-spacing:0.16em; color:var(--wine);
-    text-transform:uppercase;
-  }
-  .notice-item .tag.bul{color:var(--gold); font-weight:600}
-  .notice-item .title{
-    font-size:14.5px; color:var(--ink); font-weight:500;
-    line-height:1.5;
-  }
-  .notice-item .title:hover{color:var(--wine); text-decoration:underline; text-underline-offset:4px}
-  .notice-item .date{
-    font-family:'Cormorant Garamond', serif; font-size:13px;
-    color:var(--ink-muted); text-align:right; letter-spacing:0.04em;
-  }
-
-  /* ── Regulations ── */
-  .regs{background:var(--paper); border-top:1px solid var(--rule); border-bottom:1px solid var(--rule)}
-  .regs-grid{display:grid; grid-template-columns:1fr 1fr; gap:24px}
-  .reg{
-    background:var(--bg);
-    border:1px solid var(--rule);
-    padding:36px 32px;
-    position:relative;
-  }
-  .reg .lbl{
-    font-family:'Cormorant Garamond', serif;
-    font-size:11px; letter-spacing:0.22em; color:var(--gold);
-    text-transform:uppercase; margin-bottom:8px;
-  }
-  .reg h4{
-    font-family:'Noto Serif KR', serif; font-weight:700;
-    font-size:22px; color:var(--ink); margin-bottom:14px;
-  }
-  .reg .summary{
-    font-size:13.5px; color:var(--ink-soft); line-height:1.8;
-    margin-bottom:20px;
-  }
-  .reg ol{
-    list-style:none; counter-reset:reg-counter;
-  }
-  .reg ol li{
-    counter-increment:reg-counter;
-    padding:10px 0 10px 32px; position:relative;
-    font-size:13px; color:var(--ink-soft); line-height:1.7;
-    border-top:1px dotted var(--rule-soft);
-  }
-  .reg ol li:first-child{border-top:none}
-  .reg ol li::before{
-    content:counter(reg-counter, decimal-leading-zero);
-    position:absolute; left:0; top:11px;
-    font-family:'Cormorant Garamond', serif; font-style:italic;
-    color:var(--wine); font-size:14px; letter-spacing:0.04em;
-  }
-  .reg ol li strong{color:var(--ink); font-weight:600}
+  .twin-card .link:hover{background:var(--gold-soft); transform:translateX(3px)}
+  .twin-card.alt .link{background:var(--wine); color:var(--paper); border:1px solid var(--wine)}
+  .twin-card.alt .link:hover{background:var(--wine-dark); border-color:var(--wine-dark)}
 
   /* ── Footer ── */
-  .contact{
-    background:var(--wine-deep); color:#E8DDC4;
-    padding:80px 0 40px; position:relative;
+  footer{background:var(--wine-deep); color:#E8DDC4; padding:60px 0 30px}
+  .foot-inner{max-width:1180px; margin:0 auto; padding:0 28px}
+  .foot-top{
+    display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:50px;
+    padding-bottom:36px; border-bottom:1px solid rgba(168,132,62,.2);
   }
-  .contact::before{
-    content:'KLAI'; position:absolute; left:-20px; bottom:-30px;
-    font-family:'Cormorant Garamond', serif;
-    font-size:280px; line-height:1; color:rgba(168,132,62,0.05);
-    letter-spacing:0.05em; pointer-events:none; user-select:none;
+  .foot-brand svg{width:200px; height:auto; margin-bottom:18px}
+  .foot-brand p{font-size:13px; line-height:1.8; color:#C8B89A; max-width:340px}
+  .foot-col h5{
+    font-family:'Cormorant Garamond',serif; font-size:12px;
+    letter-spacing:0.22em; color:var(--gold-soft); text-transform:uppercase;
+    margin-bottom:16px; padding-bottom:10px;
+    border-bottom:1px solid rgba(168,132,62,.2);
   }
-  .contact-grid{
-    display:grid; grid-template-columns:1.6fr 1fr 1fr 1fr; gap:40px;
-    position:relative; z-index:1; padding-bottom:36px;
-    border-bottom:1px solid rgba(168,132,62,0.2);
-  }
-  .footer-logo{
-    width:240px; height:auto; margin-bottom:20px; display:block;
-  }
-  .contact-brand p{
-    font-size:13px; line-height:1.8; color:#C8B89A; max-width:360px;
-    margin-bottom:18px;
-  }
-  .legal-info{
-    font-size:11.5px; color:#9C8A6F; line-height:1.8;
+  .foot-col ul{list-style:none}
+  .foot-col li{margin-bottom:9px; font-size:13px}
+  .foot-col a{color:#C8B89A}
+  .foot-col a:hover{color:var(--gold-soft)}
+  .legal{
+    margin-top:24px; font-size:11.5px; color:#8B7A60; line-height:1.9;
     letter-spacing:0.02em;
   }
-  .legal-info .row{display:flex; gap:8px; flex-wrap:wrap}
-  .legal-info .row b{color:#C8B89A; font-weight:500}
-  .contact-col h5{
-    font-family:'Cormorant Garamond', serif; font-size:12px;
-    letter-spacing:0.22em; color:var(--gold-soft);
-    text-transform:uppercase; margin-bottom:18px;
-    padding-bottom:10px; border-bottom:1px solid rgba(168,132,62,0.2);
-  }
-  .contact-col ul{list-style:none}
-  .contact-col li{margin-bottom:9px; font-size:13px}
-  .contact-col li a{color:#C8B89A; transition:color 0.2s}
-  .contact-col li a:hover{color:var(--gold-soft)}
-  .contact-col .info-row{
-    display:grid; grid-template-columns:54px 1fr; gap:10px;
-    font-size:12.5px; margin-bottom:12px; line-height:1.6;
-  }
-  .contact-col .info-row .k{
-    font-family:'Cormorant Garamond', serif; color:var(--gold-soft);
-    letter-spacing:0.1em; font-size:11px;
-  }
-  .contact-col .info-row .v{color:#E0D2B5}
-
-  .foot{
-    padding-top:26px; position:relative; z-index:1;
-    display:flex; justify-content:space-between; align-items:center;
-    flex-wrap:wrap; gap:14px;
+  .legal .row{display:flex; gap:8px; flex-wrap:wrap}
+  .legal .row b{color:#C8B89A; font-weight:500; min-width:90px}
+  .foot-bottom{
+    padding-top:24px; display:flex; justify-content:space-between;
+    align-items:center; flex-wrap:wrap; gap:14px;
     font-size:11.5px; color:#8B7A60; letter-spacing:0.04em;
   }
-  .foot .est{
-    font-family:'Cormorant Garamond', serif; font-style:italic;
+  .foot-bottom .est{
+    font-family:'Cormorant Garamond',serif; font-style:italic;
     color:var(--gold-soft); font-size:13px; letter-spacing:0.14em;
   }
-  .foot .legal{display:flex; gap:18px}
-  .foot .legal a:hover{color:var(--gold-soft)}
 
   /* ── Mobile ── */
-  @media (max-width: 1100px){
-    nav.main a{padding:9px 9px; font-size:12.5px}
+  @media (max-width:980px){
+    .head{flex-wrap:wrap; gap:14px}
+    nav ul{flex-wrap:wrap; justify-content:flex-end}
+    .about-inner{grid-template-columns:1fr; gap:36px}
+    .twin-grid{grid-template-columns:1fr}
+    .foot-top{grid-template-columns:1fr; gap:30px}
+    .hero::before{font-size:200px; right:-40px}
   }
-  @media (max-width: 980px){
-    .hero-inner{grid-template-columns:1fr; gap:50px}
-    .greeting{grid-template-columns:1fr; gap:30px}
-    .greeting-portrait{max-width:260px}
-    .purpose-grid{grid-template-columns:1fr; gap:30px}
-    .course-grid{grid-template-columns:repeat(2,1fr)}
-    .timeline{grid-template-columns:repeat(2,1fr); gap:40px 0}
-    .org-divisions{grid-template-columns:repeat(3,1fr)}
-    .partner-grid{grid-template-columns:1fr 1fr}
-    .info-cards{grid-template-columns:1fr}
-    .notice-grid{grid-template-columns:1fr; gap:30px}
-    .regs-grid{grid-template-columns:1fr}
-    .contact-grid{grid-template-columns:1fr 1fr; gap:32px}
-    .credit-wrap{grid-template-columns:1fr; gap:30px}
-    .patron-feature{grid-template-columns:1fr; padding:36px 30px}
-    .location-grid{grid-template-columns:1fr; gap:24px}
-    nav.main{display:none; position:absolute; top:100%; left:0; right:0; background:var(--paper); border-bottom:1px solid var(--rule); padding:14px 28px; z-index:50}
-    nav.main.open{display:block}
-    nav.main ul{flex-direction:column; align-items:stretch; gap:0}
-    nav.main a{padding:12px 4px; border-bottom:1px solid var(--rule-soft); font-size:14px}
-    nav.main a.cta{margin-left:0; margin-top:10px; text-align:center}
-    .menu-btn{display:inline-block}
-    .head-inner{position:relative}
-    .hero::before{font-size:200px; right:-50px}
-  }
-  @media (max-width: 600px){
-    section{padding:60px 0}
-    .container{padding:0 20px}
-    .head-inner{padding:14px 20px}
-    .logo-img{height:44px}
-    .brand-tag{font-size:10px}
-    .course-grid{grid-template-columns:1fr}
-    .org-divisions{grid-template-columns:1fr 1fr}
-    .partner-grid{grid-template-columns:1fr}
-    .contact-grid{grid-template-columns:1fr; gap:32px}
-    .notice-item{grid-template-columns:70px 1fr; gap:12px}
-    .notice-item .date{display:none}
-    .annc .right{display:none}
+  @media (max-width:600px){
+    .head{padding:14px 20px}
+    nav a{padding:8px 10px; font-size:13px}
+    nav a.cta{margin-left:0; margin-top:6px}
+    .hero{padding:60px 0 80px}
     .hero h1{font-size:30px}
-    .hero{padding:50px 0 70px}
-    .patron-feature{padding:28px 22px}
-    .patron-feature h3{font-size:24px}
-    .credit-stamp{padding:40px 24px}
+    .hero-inner,.about-inner,.twin-inner,.foot-inner{padding:0 20px}
+    .about,.twin{padding:60px 0}
+    .twin-card{padding:34px 26px}
+    .about-info{grid-template-columns:1fr}
   }
 
-  /* ── Animations ── */
-  .reveal{
-    opacity:0; transform:translateY(20px);
-    animation:reveal 0.9s cubic-bezier(.2,.7,.2,1) forwards;
-  }
-  .reveal.d1{animation-delay:0.1s}
-  .reveal.d2{animation-delay:0.25s}
-  .reveal.d3{animation-delay:0.4s}
-  .reveal.d4{animation-delay:0.55s}
-  @keyframes reveal{to{opacity:1; transform:translateY(0)}}
+  .reveal{opacity:0; transform:translateY(20px); animation:r 1s cubic-bezier(.2,.7,.2,1) forwards}
+  .reveal.d1{animation-delay:.1s}
+  .reveal.d2{animation-delay:.25s}
+  .reveal.d3{animation-delay:.4s}
+  @keyframes r{to{opacity:1; transform:translateY(0)}}
 </style>
 </head>
 <body>
 
-<a href="#main" class="skip">본문 바로가기</a>
-
-<!-- ── Announcement bar ── -->
-<div class="annc">
-  <div class="inner">
-    <div class="left">
-      <span class="badge">Notice</span>
-      <span>한국법학진흥원이 광화문 변호사회관(서울 종로구)에 입주하였습니다. 2026년도 비학위·전문가 과정이 단계별 개설됩니다.</span>
-    </div>
-    <div class="right">
-      <a href="/login/">로그인</a>
-      <a href="/register/">회원가입</a>
-      <a href="/classroom/">내 강의실</a>
-      <a href="#notice">공지사항</a>
-    </div>
-  </div>
-</div>
-
-<!-- ── Header ── -->
-<header class="site">
-  <div class="head-inner">
+<header>
+  <div class="head">
     <a href="#" class="brand" aria-label="한국법학진흥원 홈">
-      <svg class="logo-img" viewBox="0 0 280 70" xmlns="http://www.w3.org/2000/svg" aria-label="KLAI 한국법학진흥원">
-        <g font-family="'Noto Sans KR', 'Arial Black', sans-serif" font-weight="900" font-size="42" letter-spacing="-1.2">
+      <svg viewBox="0 0 280 70" xmlns="http://www.w3.org/2000/svg" aria-label="KLAI 한국법학진흥원">
+        <g font-family="'Noto Sans KR','Arial Black',sans-serif" font-weight="900" font-size="42" letter-spacing="-1.2">
           <text x="6" y="40" fill="#B71C2C">K</text>
           <text x="34" y="40" fill="#1F1714">LAI</text>
         </g>
         <path d="M 88 32 Q 116 22 142 36" fill="none" stroke="#B71C2C" stroke-width="1.4" stroke-linecap="round" opacity="0.85"/>
-        <text x="6" y="62" font-family="'Noto Sans KR', sans-serif" font-weight="700" font-size="17" letter-spacing="3" fill="#1F1714">한국법학진흥원</text>
+        <text x="6" y="62" font-family="'Noto Sans KR',sans-serif" font-weight="700" font-size="17" letter-spacing="3" fill="#1F1714">한국법학진흥원</text>
       </svg>
-      <div class="brand-text">
-        <span class="brand-tag">敎育廳 登錄 平生學習機關</span>
-        <span class="brand-en-sub">Korea Law Advancement Institute</span>
-      </div>
     </a>
-    <button class="menu-btn" id="menuBtn" aria-label="메뉴 열기" aria-expanded="false">MENU</button>
-    <nav class="main" id="mainNav" aria-label="주메뉴">
+    <nav aria-label="주메뉴">
       <ul>
         <li><a href="#about">진흥원 소개</a></li>
-        <li><a href="#non-degree">비학위과정</a></li>
-        <li><a href="#credit">학점은행제</a></li>
-        <li><a href="#expert">전문가 과정</a></li>
-        <li><a href="#patronage">후원·협력</a></li>
-        <li><a href="#info">정보광장</a></li>
-        <li><a href="#notice">공지사항</a></li>
-        <li><a href="#regs">운영규정</a></li>
-        <li><a href="/shop/" class="cta">수강 신청 →</a></li>
+        <li><a href="#twin">부속·후원</a></li>
+        <li><a href="https://klaiedu.com" target="_blank" rel="noopener" class="cta">연수원 바로가기 ↗</a></li>
       </ul>
     </nav>
   </div>
 </header>
 
-<main id="main">
-
-<!-- ── Hero ── -->
 <section class="hero">
   <div class="hero-inner">
-    <div class="hero-left">
-      <div class="vol-label reveal">
-        <span class="line"></span>
-        <span class="text">EST. 2024 · 韓國法學振興院</span>
-      </div>
-      <h1 class="reveal d1">
-        법학의 토대를 다지고,<br>
-        <span class="accent">새 시대의 법학 인재</span>를 양성합니다.
-      </h1>
-      <p class="subtitle-en reveal d2">Advancing legal scholarship for the age of intelligence.</p>
-      <p class="manifesto reveal d3">
-        한국법학진흥원(KLAI)은 <strong>법학의 대중화, 법학교육의 질적 향상,
-        법학 학습 표준 정립</strong>을 목적으로 설립된 교육청 등록 평생학습기관입니다.
-        비학위 과정과 전문가 양성과정을 운영하고, 학점은행제 인증 절차를 준비 중이며,
-        법학경시대회(Korean Law Olympiad)를 비롯한 학술 사업을 후원합니다.
-      </p>
-      <div class="hero-actions reveal d4">
-        <a href="#about" class="btn btn-primary">진흥원 소개 <span class="arr">→</span></a>
-        <a href="#non-degree" class="btn btn-ghost">교육 과정 보기 <span class="arr">→</span></a>
-      </div>
-      <div class="hero-trust reveal d4">
-        <span class="trust-item"><span class="dot"></span>교육청 등록 평생학습기관</span>
-        <span class="trust-item"><span class="dot"></span>원격형 평생교육시설 신고 추진</span>
-        <span class="trust-item"><span class="dot"></span>법학경시대회 주최(제8회~)</span>
-        <span class="trust-item"><span class="dot"></span>광화문 변호사회관 소재</span>
-      </div>
+    <div class="hero-label reveal">
+      <span class="line"></span>
+      <span class="text">EST. 2024 · 韓國法學振興院</span>
     </div>
-
-    <aside class="hero-card reveal d2" aria-label="진흥원 요약">
-      <div class="top">
-        <span class="label">Institute Charter</span>
-        <span class="vol">Vol. III · 2026</span>
-      </div>
-      <div class="hero-seal-panel">
-        <svg class="hero-seal-img" viewBox="0 0 360 220" xmlns="http://www.w3.org/2000/svg" aria-label="한국법학진흥원 KLAI">
-          <g font-family="'Noto Sans KR', 'Arial Black', sans-serif" font-weight="900" font-size="92" letter-spacing="-2">
-            <text x="14" y="100" fill="#D02638">K</text>
-            <text x="76" y="100" fill="#F5EFE4">LAI</text>
-          </g>
-          <path d="M 195 78 Q 245 56 308 88" fill="none" stroke="#D02638" stroke-width="2.4" stroke-linecap="round" opacity="0.9"/>
-          <text x="180" y="158" text-anchor="middle" font-family="'Noto Sans KR', sans-serif" font-weight="700" font-size="32" letter-spacing="2" fill="#F5EFE4">한국법학진흥원</text>
-          <text x="180" y="190" text-anchor="middle" font-family="'Noto Sans KR', 'Arial', sans-serif" font-weight="500" font-size="13" letter-spacing="3" fill="#C8A968">KOREA LAW ADVANCEMENT INSTITUTE</text>
-        </svg>
-        <div class="hero-seal-est">EST · MMXXIV · 韓國法學振興院</div>
-      </div>
-      <div class="body">
-        <div class="meta">
-          <div class="item">
-            <div class="k">Foundation</div>
-            <div class="v">2024.11.26</div>
-          </div>
-          <div class="item">
-            <div class="k">Type</div>
-            <div class="v">평생학습기관</div>
-          </div>
-          <div class="item">
-            <div class="k">Director</div>
-            <div class="v">김민규</div>
-          </div>
-          <div class="item">
-            <div class="k">Base</div>
-            <div class="v">광화문 변호사회관</div>
-          </div>
-        </div>
-      </div>
-    </aside>
+    <h1 class="reveal d1">
+      법학의 토대를 다지고,<br>
+      <span class="accent">새 시대의 법학 인재</span>를 양성합니다.
+    </h1>
+    <p class="hero-en reveal d2">Advancing legal scholarship for the age of intelligence.</p>
+    <p class="hero-text reveal d2">
+      한국법학진흥원(KLAI)은 <strong>법학의 대중화, 법학교육의 질적 향상, 법학 학습 표준 정립</strong>을
+      목적으로 설립된 비영리 학술 기관입니다.
+      부속 연수원을 통해 법학 정규·전문가 과정을 운영하고,
+      법학경시대회를 비롯한 학술 사업을 후원합니다.
+    </p>
+    <div class="hero-cta reveal d3">
+      <a href="https://klaiedu.com" target="_blank" rel="noopener" class="btn btn-primary">연수원 바로가기 <span class="arr">↗</span></a>
+      <a href="#about" class="btn btn-ghost">진흥원 소개 <span class="arr">→</span></a>
+    </div>
   </div>
 </section>
 
-<!-- ── [1] 진흥원 소개 ── -->
 <section class="about" id="about">
-  <div class="container">
-    <div class="sec-head">
-      <div class="sec-eyebrow"><span class="num">01</span> About · 진흥원 소개</div>
+  <div class="about-inner">
+    <div>
+      <div class="eyebrow">About</div>
       <h2 class="sec-title">법학의 진흥(振興)은,<br>한 세대의 학습을 <span class="gold">다음 세대의 자산</span>으로 잇는 일입니다.</h2>
-    </div>
-
-    <div class="about-tabs" role="tablist">
-      <button class="active" data-tab="greeting" role="tab"><span class="latin">01</span>원장 인사말</button>
-      <button data-tab="purpose" role="tab"><span class="latin">02</span>설립 목적</button>
-      <button data-tab="history" role="tab"><span class="latin">03</span>연혁</button>
-      <button data-tab="org" role="tab"><span class="latin">04</span>조직도</button>
-      <button data-tab="location" role="tab"><span class="latin">05</span>오시는 길</button>
-    </div>
-
-    <!-- 원장 인사말 -->
-    <div class="about-panel active" data-panel="greeting">
-      <div class="greeting">
-        <div class="greeting-portrait">
-          <div class="silhouette">
-            <img src="data:image/jpeg;base64,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" alt="진흥원장 김민규" class="director-photo">
-          </div>
-          <div class="name">김 민 규</div>
-          <div class="title">Director, KLAI</div>
+      <div class="about-info">
+        <div class="info">
+          <div class="k">Foundation</div>
+          <div class="v">2024.11.26</div>
         </div>
-        <div class="greeting-text">
-          <h3>"법학의 깊이는 시간이 쌓아 올린 것이며,<br>진흥은 그 시간을 다음 세대로 잇는 일에서 비롯됩니다."</h3>
-          <p>
-            법학전문대학원 체제가 도입된 이후, <strong>학부 법학교육의 기반은 점점 좁아져 왔습니다.</strong>
-            법학 전임교원의 감소, 학부 법학과의 축소·폐지, 기초법학의 재생산 구조 위축이 동시에 진행되었고,
-            비전공자를 포함한 일반 학습자가 법학을 체계적으로 접할 수 있는 경로는 더 좁아졌습니다.
-          </p>
-          <p>
-            한국법학진흥원은 이러한 공백을 <strong>평생교육·경시대회·인증시험·교재 출판</strong>이라는
-            다층 구조로 메우기 위해 설립되었습니다. 학문으로서의 법학이 가진 깊이를 존중하되,
-            학습의 문턱이 학력·지역·경제력에 의해 좁아지지 않도록 길을 넓히는 일을
-            진흥원의 첫 번째 책무로 삼고 있습니다.
-          </p>
-          <p>
-            오늘날의 법조 실무는 판례 검색·AI 요약·법률 챗봇·CBT 시험과 같이 기술적 환경 위에서 운영됩니다.
-            진흥원은 <strong>법학의 정통과 기술의 응용 사이의 간극</strong>을 좁히는 교육 과정을 설계하고,
-            청년 법조인과 학습자 공동체와 함께 학문의 결실이 사회로 환원되는 길을 열어 가겠습니다.
-          </p>
-          <div class="greeting-sign">
-            <div class="name">김민규 · KIM, Min-Kyu</div>
-            <div class="role">진흥원장 / Director, Korea Law Advancement Institute</div>
-          </div>
+        <div class="info">
+          <div class="k">Type</div>
+          <div class="v">비영리 학술 기관</div>
+        </div>
+        <div class="info">
+          <div class="k">Subordinate</div>
+          <div class="v">부속 연수원</div>
+        </div>
+        <div class="info">
+          <div class="k">Base</div>
+          <div class="v">광화문 변호사회관</div>
         </div>
       </div>
     </div>
-
-    <!-- 설립 목적 -->
-    <div class="about-panel" data-panel="purpose">
-      <div class="purpose-grid">
-        <div class="purpose-left">
-          <div class="meta-block">
-            <div class="k">Mission</div>
-            <div class="v">법학의 대중화<br>법학교육의 질적 향상<br>법학 학습 표준 정립</div>
-          </div>
-          <div class="meta-block">
-            <div class="k">Vision</div>
-            <div class="v">학문과 기술의 가교,<br>한국 법학의 진흥</div>
-          </div>
-          <div class="meta-block">
-            <div class="k">Values</div>
-            <div class="v">정통성 · 개방성 · 응용성</div>
-          </div>
-          <div class="meta-block">
-            <div class="k">Legal Status</div>
-            <div class="v">교육청 등록<br>평생학습기관</div>
-          </div>
-        </div>
-
-        <div class="purpose-text">
-          <p>
-            한국법학진흥원의 사업 설계는 <strong>교육공학 이론</strong>에 근거합니다.
-            인지부하이론, 시험효과·간격반복, Bloom의 교육목표분류학과 진정성평가,
-            스캐폴딩·안드라고지, 평생교육 프로그램 개발론, AI 활용 출제·감독의
-            여섯 축을 분석 틀로 합니다.
-          </p>
-          <p>
-            진흥원은 비학위 교육 과정과 전문가 양성 과정을 운영하고,
-            <strong>학점은행제 인증을 단계적으로 준비</strong>하며,
-            법학경시대회(Korean Law Olympiad)와 같이 공익적 성격을 가진 외부 학술 사업을
-            후원·주최합니다. 제1회부터 제7회까지는 법률사무소 선율의 위원회가 주최하였고,
-            <strong>제8회부터는 한국법학진흥원이 주최를 이어받습니다.</strong>
-          </p>
-          <div class="pull-quote">
-            "법학의 깊이는 시간이 쌓아 올린 것이며,
-            진흥은 그 시간을 다음 세대로 잇는 일에서 비롯됩니다."
-            <span class="src">— 진흥원 설립 취지문 中</span>
-          </div>
-          <p>
-            진흥원은 교재 출판(원자단위 교재·표준판례집), 정기간행 학술지, 법학 교육 전문 인터넷 신문,
-            디지털 학습교구의 개발·운영을 단계적으로 추진하며, 청년 변호사가 강사로 위촉되는 구조를 통해
-            <strong>학습자–수상자–강사–연구자–법조인으로 이어지는 선순환 생태계</strong>를 지향합니다.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <!-- 연혁 -->
-    <div class="about-panel" data-panel="history">
-      <div class="timeline">
-        <div class="tl-item">
-          <div class="tl-year">2024</div>
-          <ul class="tl-items">
-            <li><span class="date">11.26</span><strong>한국법학진흥원 법인 설립</strong> · 사업자등록</li>
-            <li><span class="date">11.28</span>의무이행자 지정 (국세기본법 제13조)</li>
-            <li>설립 취지문 채택 및 사업계획 수립</li>
-          </ul>
-        </div>
-        <div class="tl-item">
-          <div class="tl-year">2025</div>
-          <ul class="tl-items">
-            <li>법학경시대회 후원 기관으로 참여</li>
-            <li>비학위 교육 과정 설계 착수</li>
-            <li>학습 자료 아카이브 사업 개시</li>
-            <li>학술 협력 네트워크 구성</li>
-          </ul>
-        </div>
-        <div class="tl-item">
-          <div class="tl-year">2026</div>
-          <ul class="tl-items">
-            <li><span class="date">05.12</span>광화문 <strong>변호사회관 입주</strong> (소재지 이전)</li>
-            <li>비학위·전문가 과정 단계별 개설</li>
-            <li><strong>제8회 법학경시대회 주최 전환</strong></li>
-            <li>원자단위 교재 집필 착수</li>
-          </ul>
-        </div>
-        <div class="tl-item">
-          <div class="tl-year">2027~</div>
-          <ul class="tl-items">
-            <li>학점은행제 인증 추진</li>
-            <li>법학판례능력검정 시범 시행</li>
-            <li>정기간행 학술지 발행</li>
-            <li>디지털 학습교구 정식 출시</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <!-- 조직도 -->
-    <div class="about-panel" data-panel="org">
-      <div class="org-tree">
-        <div class="org-top">
-          <div class="box">한국법학진흥원 · 진흥원장</div>
-          <div class="below"></div>
-        </div>
-        <div class="org-divisions">
-          <div class="org-cell">
-            <div class="num">D · 01</div>
-            <div class="name">평생교육원</div>
-            <div class="role">비학위과정<br>전문가 양성과정</div>
-          </div>
-          <div class="org-cell">
-            <div class="num">D · 02</div>
-            <div class="name">출판사업부</div>
-            <div class="role">원자단위 교재<br>표준판례집 · 학술지</div>
-          </div>
-          <div class="org-cell">
-            <div class="num">D · 03</div>
-            <div class="name">법학연구소</div>
-            <div class="role">KCI 논문 · 판례평석<br>교육공학 연구</div>
-          </div>
-          <div class="org-cell">
-            <div class="num">D · 04</div>
-            <div class="name">인증시험본부</div>
-            <div class="role">법학판례능력검정<br>(준비 단계)</div>
-          </div>
-          <div class="org-cell">
-            <div class="num">D · 05</div>
-            <div class="name">협력사업부</div>
-            <div class="role">법학경시대회 후원<br>외부 학술 협력</div>
-          </div>
-        </div>
-      </div>
-      <p style="margin-top:30px; font-size:13.5px; color:var(--ink-muted); text-align:center; line-height:1.8">
-        ※ 각 부서는 진흥원장 직속으로 운영됩니다. 사업 영역별 자문위원 명단은 정비 후 별도 공개됩니다.
+    <div class="about-text">
+      <p>
+        법학전문대학원 체제가 도입된 이후, 학부 법학교육의 기반은 점점 좁아져 왔습니다.
+        비전공자를 포함한 일반 학습자가 법학을 체계적으로 접할 수 있는 경로 또한 좁아진 가운데,
+        한국법학진흥원은 이 공백을 <strong>교육·경시대회·학술 사업</strong>의 다층 구조로 메우기 위해 설립되었습니다.
       </p>
-    </div>
-
-    <!-- 오시는 길 -->
-    <div class="about-panel" data-panel="location">
-      <div class="location-grid">
-        <div class="location-map" role="img" aria-label="광화문 변호사회관 약도">
-          <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
-            <rect width="400" height="300" fill="#F5EFE4"/>
-            <!-- roads -->
-            <g stroke="#C8B89A" stroke-width="1" fill="none">
-              <path d="M 0 150 L 400 150"/>
-              <path d="M 200 0 L 200 300"/>
-              <path d="M 80 0 L 80 300"/>
-            </g>
-            <g stroke="#A8843E" stroke-width="2" fill="none">
-              <path d="M 0 180 L 400 180"/>
-            </g>
-            <!-- subway icon -->
-            <g transform="translate(80 150)">
-              <circle r="14" fill="#5C1F2C"/>
-              <text y="5" text-anchor="middle" fill="#F5EFE4" font-family="Inter, sans-serif" font-size="11" font-weight="700">5</text>
-            </g>
-            <text x="80" y="180" text-anchor="middle" font-family="Noto Sans KR, sans-serif" font-size="10" fill="#3A2E28">광화문역</text>
-            <text x="80" y="194" text-anchor="middle" font-family="Cormorant Garamond, serif" font-style="italic" font-size="9" fill="#6B5B52">Gwanghwamun Stn.</text>
-
-            <!-- KLAI marker -->
-            <g transform="translate(220 130)">
-              <path d="M 0 -22 C -10 -22 -16 -14 -16 -6 C -16 4 0 18 0 18 C 0 18 16 4 16 -6 C 16 -14 10 -22 0 -22 Z" fill="#5C1F2C"/>
-              <circle cx="0" cy="-7" r="5" fill="#F5EFE4"/>
-            </g>
-            <rect x="206" y="148" width="58" height="32" fill="#FBF7EE" stroke="#5C1F2C" stroke-width="1"/>
-            <text x="235" y="161" text-anchor="middle" font-family="Noto Serif KR, serif" font-size="9" font-weight="700" fill="#5C1F2C">변호사회관</text>
-            <text x="235" y="173" text-anchor="middle" font-family="Cormorant Garamond, serif" font-style="italic" font-size="8" fill="#6B5B52">KLAI Office</text>
-
-            <!-- Sejong-daero label -->
-            <text x="200" y="142" text-anchor="middle" font-family="Cormorant Garamond, serif" font-style="italic" font-size="9" fill="#A8843E" letter-spacing="2">SAEMUNAN-RO 5-GIL</text>
-
-            <!-- compass -->
-            <g transform="translate(360 40)">
-              <circle r="14" fill="none" stroke="#C8B89A" stroke-width="0.8"/>
-              <path d="M 0 -10 L 3 0 L 0 10 L -3 0 Z" fill="#5C1F2C"/>
-              <text y="-18" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="9" fill="#5C1F2C">N</text>
-            </g>
-          </svg>
-        </div>
-        <div class="location-info">
-          <div class="info-row">
-            <span class="k">Address</span>
-            <span class="v"><strong>한국법학진흥원</strong><br>서울특별시 종로구 새문안로5길 13<br>지하1층 29호 (당주동, 변호사회관)</span>
-          </div>
-          <div class="info-row">
-            <span class="k">Subway</span>
-            <span class="v">지하철 5호선 광화문역 7번 출구<br>도보 약 3분</span>
-          </div>
-          <div class="info-row">
-            <span class="k">Bus</span>
-            <span class="v">간선 101·150·160·260 외 다수<br>(광화문 / 종로구청 정류장)</span>
-          </div>
-          <div class="info-row">
-            <span class="k">Hours</span>
-            <span class="v">평일 10:00–17:00<br>(점심시간 12:30–13:30)</span>
-          </div>
-          <div class="info-row">
-            <span class="k">Contact</span>
-            <span class="v"><a href="mailto:info@lawtest.co.kr" style="color:var(--wine); border-bottom:1px solid var(--wine)">info@lawtest.co.kr</a><br>회신은 영업일 기준 1–2일 이내</span>
-          </div>
-        </div>
-      </div>
+      <p>
+        진흥원은 학문으로서의 법학이 가진 깊이를 존중하되,
+        학습의 문턱이 학력·지역·경제력에 의해 좁아지지 않도록 길을 넓히는 일을 첫 번째 책무로 삼습니다.
+        부속 연수원을 통한 정규 교육 사업, 법학경시대회 주최, 학술 출판·연구가 진흥원의 세 축입니다.
+      </p>
     </div>
   </div>
 </section>
 
-<!-- ── [2] 비학위과정 ── -->
-<section class="courses" id="non-degree">
-  <div class="container">
-    <div class="sec-head">
-      <div class="sec-eyebrow"><span class="num">02</span> Non-Degree · 비학위과정</div>
-      <h2 class="sec-title">법학 입문부터 사례 분석까지,<br><span class="gold">기초 3법</span>의 학습 경로</h2>
-      <p class="sec-sub">
-        비전공자도 자기주도적으로 법학의 체계를 익힐 수 있도록 설계된 비학위 정규 과정입니다.
-        헌법·민법·형법의 핵심 영역을 단계적으로 다루며, 원자단위 교재와 판례 학습을 결합합니다.
-      </p>
+<section class="twin" id="twin">
+  <div class="twin-inner">
+    <div class="twin-head">
+      <div class="eyebrow">Affiliated &amp; Patronage</div>
+      <h2 class="sec-title">부속 연수원과 후원 사업</h2>
     </div>
-
-    <div class="course-grid">
-      <div class="course featured">
-        <div class="num">01</div>
-        <div class="lbl">Introduction</div>
-        <h3>법학개론</h3>
+    <div class="twin-grid">
+      <div class="twin-card">
+        <div class="lbl">Affiliated · 부속 교육시설</div>
+        <h3>한국법학진흥원 연수원</h3>
+        <div class="en">Korea Law Advancement Institute · Academy</div>
         <p>
-          법학의 체계·법원(法源)·법해석 방법을 다루는 진흥원 대표 입문 강좌.
-          비전공자가 법학 학습의 토대를 다지는 표준 과정.
+          진흥원이 운영하는 부속 교육시설. 법학 정규 과정(헌법·민법·형법)과
+          전문가 양성 과정(법령정보분석·도산법 실무 등)을 운영합니다.
+          수강 신청·내 강의실은 별도 사이트에서 제공됩니다.
         </p>
-        <div class="specs">
-          <div class="spec"><span class="k">Level</span><span>입문 · 전공 무관</span></div>
-          <div class="spec"><span class="k">Length</span><span>16주 · 32차시</span></div>
-          <div class="spec"><span class="k">Format</span><span>온·오프라인 병행</span></div>
-        </div>
-        <div class="tags">
-          <span class="tag">대표 강좌</span>
-          <span class="tag">비전공자</span>
-        </div>
-        <div class="course-fee"><span class="fee-k">학습비</span><span class="fee-v">별도 안내 · 16주 32차시</span></div>
-        <a class="course-btn" href="/shop/?course=law-intro">수강 신청 <span class="arr">→</span></a>
+        <a href="https://klaiedu.com" target="_blank" rel="noopener" class="link">klaiedu.com 바로가기 ↗</a>
       </div>
-
-      <div class="course">
-        <div class="num">02</div>
-        <div class="lbl">Constitutional</div>
-        <h3>헌법연습</h3>
-        <p>
-          기본권론·통치구조론을 중심으로 헌법재판소 결정례와 판례를 반복 학습합니다.
-          조문검색·판례검색·규범이해·사례분석의 네 영역을 균형 있게 다룹니다.
-        </p>
-        <div class="specs">
-          <div class="spec"><span class="k">Level</span><span>중급</span></div>
-          <div class="spec"><span class="k">Length</span><span>12주 · 24차시</span></div>
-          <div class="spec"><span class="k">Format</span><span>판례연습 중심</span></div>
-        </div>
-        <div class="tags">
-          <span class="tag">기본권론</span>
-          <span class="tag">헌재 결정례</span>
-        </div>
-        <div class="course-fee"><span class="fee-k">학습비</span><span class="fee-v">별도 안내 · 12주 24차시</span></div>
-        <a class="course-btn" href="/shop/?course=constitutional">수강 신청 <span class="arr">→</span></a>
-      </div>
-
-      <div class="course">
-        <div class="num">03</div>
-        <div class="lbl">Civil Law</div>
-        <h3>민법연습</h3>
-        <p>
-          민법총칙·물권법·채권법·가족법을 단계별로 학습합니다. 원자단위 교재와
-          기출 오지문 트레이닝을 결합하여 시험효과를 극대화합니다.
-        </p>
-        <div class="specs">
-          <div class="spec"><span class="k">Level</span><span>중·심화</span></div>
-          <div class="spec"><span class="k">Length</span><span>20주 · 40차시</span></div>
-          <div class="spec"><span class="k">Format</span><span>원자단위 학습</span></div>
-        </div>
-        <div class="tags">
-          <span class="tag">총칙·물권·채권</span>
-          <span class="tag">가족법</span>
-        </div>
-        <div class="course-fee"><span class="fee-k">학습비</span><span class="fee-v">별도 안내 · 20주 40차시</span></div>
-        <a class="course-btn" href="/shop/?course=civil">수강 신청 <span class="arr">→</span></a>
-      </div>
-
-      <div class="course">
-        <div class="num">04</div>
-        <div class="lbl">Criminal Law</div>
-        <h3>형법연습</h3>
-        <p>
-          형법총론(범죄론·죄형법정주의·미수·공범)과 각론(주요 개별 범죄)을
-          판례 중심으로 풀어 갑니다. 대법원 전원합의체 판결을 우선 학습 대상으로 합니다.
-        </p>
-        <div class="specs">
-          <div class="spec"><span class="k">Level</span><span>중·심화</span></div>
-          <div class="spec"><span class="k">Length</span><span>16주 · 32차시</span></div>
-          <div class="spec"><span class="k">Format</span><span>판례·사례분석</span></div>
-        </div>
-        <div class="tags">
-          <span class="tag">총론·각론</span>
-          <span class="tag">전원합의체</span>
-        </div>
-        <div class="course-fee"><span class="fee-k">학습비</span><span class="fee-v">별도 안내 · 16주 32차시</span></div>
-        <a class="course-btn" href="/shop/?course=criminal">수강 신청 <span class="arr">→</span></a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ── [3] 학점은행제 ── -->
-<section class="credit" id="credit">
-  <div class="container">
-    <div class="sec-head">
-      <div class="sec-eyebrow"><span class="num">03</span> Credit Bank · 학점은행제</div>
-      <h2 class="sec-title"><span class="gold">학점은행제 인증</span>을 준비하고 있습니다.</h2>
-    </div>
-
-    <div class="credit-wrap">
-      <div class="credit-stamp">
-        <div class="seal">準備中</div>
-        <div class="label">In Preparation</div>
-        <div class="kr">학점은행제 인증 준비 중</div>
-        <div class="date">Target · 2027</div>
-      </div>
-      <div>
-        <p style="font-size:15.5px; color:var(--ink-soft); line-height:1.95; margin-bottom:18px">
-          한국법학진흥원은 <strong style="color:var(--wine-dark)">학점은행제 평가인정 학습과목</strong>의
-          단계적 인증을 추진하고 있습니다. 인증을 통해 진흥원에서 이수한 비학위 과정의
-          학점이 학력 인정 학점으로 환산될 수 있도록 제도적 기반을 마련하는 것이 목표입니다.
-        </p>
-        <p style="font-size:15.5px; color:var(--ink-soft); line-height:1.95; margin-bottom:18px">
-          현재는 <strong style="color:var(--wine-dark)">교육청 등록 평생학습기관</strong>으로
-          비학위과정과 전문가 양성과정을 운영하는 단계이며, 학사 운영 체계와 강의 설계
-          기준의 정비를 거쳐 평가인정 신청을 진행할 계획입니다.
-        </p>
-        <p style="font-size:14px; color:var(--ink-muted); margin-top:18px; padding:16px 18px; background:var(--bg); border-left:2px solid var(--gold)">
-          ※ 학점은행제는 「학점인정 등에 관한 법률」에 따라 국가평생교육진흥원이 운영하는 제도이며,
-          평가인정 절차를 거쳐 학습과목별로 학점이 부여됩니다. 진흥원 강의의 학점은행제 인증 전후 안내는
-          공지사항을 통해 갱신됩니다.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ── [4] 전문가 과정 ── -->
-<section class="courses" id="expert" style="background:var(--paper); border-top:1px solid var(--rule); border-bottom:1px solid var(--rule)">
-  <div class="container">
-    <div class="sec-head">
-      <div class="sec-eyebrow"><span class="num">04</span> Expert Track · 전문가 과정</div>
-      <h2 class="sec-title">실무 현장에서 요구되는<br><span class="gold">법령 분석·도산 절차</span>의 전문성</h2>
-      <p class="sec-sub">
-        법령 정보 처리·분석 역량과 도산법(채무자회생법) 실무 절차를 다루는
-        전문가 양성과정입니다. 청년 변호사·실무자·연구자를 대상으로 운영합니다.
-      </p>
-    </div>
-
-    <div class="course-grid">
-      <div class="course">
-        <div class="num">A1</div>
-        <div class="lbl">Legal Info · Analyst</div>
-        <h3>법령정보분석사</h3>
-        <p>
-          국가법령정보·판례·행정해석을 체계적으로 수집·분석하는 실무 역량을
-          기르는 입문 단계의 전문가 과정.
-        </p>
-        <div class="specs">
-          <div class="spec"><span class="k">Level</span><span>입문 전문가</span></div>
-          <div class="spec"><span class="k">Length</span><span>8주 워크숍</span></div>
-          <div class="spec"><span class="k">Track</span><span>리서치 실무</span></div>
-        </div>
-        <div class="tags">
-          <span class="tag">법령정보</span>
-          <span class="tag">리서치</span>
-        </div>
-        <div class="course-fee"><span class="fee-k">학습비</span><span class="fee-v">별도 안내 · 8주 워크숍</span></div>
-        <a class="course-btn" href="/shop/?course=legal-info">수강 신청 <span class="arr">→</span></a>
-      </div>
-
-      <div class="course">
-        <div class="num">A2</div>
-        <div class="lbl">Legal AI · Expert</div>
-        <h3>법령분석전문가</h3>
-        <p>
-          AI 기반 판례 검색·요약, 법령 변동 추적, 자동화 문서 분석을 다루는
-          심화 단계의 전문가 과정.
-        </p>
-        <div class="specs">
-          <div class="spec"><span class="k">Level</span><span>심화 전문가</span></div>
-          <div class="spec"><span class="k">Length</span><span>10주 · 워크숍</span></div>
-          <div class="spec"><span class="k">Track</span><span>AI 응용</span></div>
-        </div>
-        <div class="tags">
-          <span class="tag">리걸AI</span>
-          <span class="tag">자동화</span>
-        </div>
-        <div class="course-fee"><span class="fee-k">학습비</span><span class="fee-v">별도 안내 · 10주 워크숍</span></div>
-        <a class="course-btn" href="/shop/?course=legal-ai">수강 신청 <span class="arr">→</span></a>
-      </div>
-
-      <div class="course">
-        <div class="num">B1</div>
-        <div class="lbl">Rehabilitation</div>
-        <h3>회생 전문가 과정</h3>
-        <p>
-          채무자회생법상 회생절차의 개시신청부터 인가결정·수행까지의 실무 흐름과
-          관리인·채권자 협의의 쟁점을 다룹니다.
-        </p>
-        <div class="specs">
-          <div class="spec"><span class="k">Level</span><span>실무 전문가</span></div>
-          <div class="spec"><span class="k">Length</span><span>12주</span></div>
-          <div class="spec"><span class="k">Track</span><span>도산 실무</span></div>
-        </div>
-        <div class="tags">
-          <span class="tag">채무자회생법</span>
-          <span class="tag">관리인</span>
-        </div>
-        <div class="course-fee"><span class="fee-k">학습비</span><span class="fee-v">별도 안내 · 12주</span></div>
-        <a class="course-btn" href="/shop/?course=rehab">수강 신청 <span class="arr">→</span></a>
-      </div>
-
-      <div class="course">
-        <div class="num">B2</div>
-        <div class="lbl">Bankruptcy</div>
-        <h3>파산 전문가 과정</h3>
-        <p>
-          파산선고·환가·배당의 전반 절차와 파산관재인 업무, 면책·복권 절차의
-          쟁점을 사례 중심으로 학습합니다.
-        </p>
-        <div class="specs">
-          <div class="spec"><span class="k">Level</span><span>실무 전문가</span></div>
-          <div class="spec"><span class="k">Length</span><span>12주</span></div>
-          <div class="spec"><span class="k">Track</span><span>도산 실무</span></div>
-        </div>
-        <div class="tags">
-          <span class="tag">파산관재인</span>
-          <span class="tag">면책·복권</span>
-        </div>
-        <div class="course-fee"><span class="fee-k">학습비</span><span class="fee-v">별도 안내 · 12주</span></div>
-        <a class="course-btn" href="/shop/?course=bankruptcy">수강 신청 <span class="arr">→</span></a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ── [5] 후원·협력 ── -->
-<section class="patronage" id="patronage">
-  <div class="container">
-    <div class="sec-head">
-      <div class="sec-eyebrow"><span class="num">05</span> Patronage · 후원·협력</div>
-      <h2 class="sec-title">학술 사업의 <span class="gold">동료들</span>과,<br>진흥원이 후원하는 사업</h2>
-      <p class="sec-sub">
-        한국법학진흥원은 공익적 성격의 외부 학술 사업을 후원하며, 다양한 기관과
-        협력 관계를 맺고 있습니다. 진흥원이 후원·주최하는 대표 사업은 법학경시대회입니다.
-      </p>
-    </div>
-
-    <!-- Featured: 법학경시대회 -->
-    <div class="patron-feature">
-      <div class="left">
-        <div class="lbl">Patron Project · 후원 대표 사업</div>
-        <div class="patron-logo-wrap">
-          <img src="data:image/png;base64,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" alt="법학경시대회 로고" class="patron-logo">
-        </div>
+      <div class="twin-card alt">
+        <div class="lbl">Patronage · 대표 후원 사업</div>
         <h3>법학경시대회</h3>
         <div class="en">Korean Law Olympiad</div>
-        <p class="desc">
-          학력·학벌·지역·경제력의 진입장벽 없이 법학 인재를 발굴·양성하는 공익 학술 대회.
-          제1회부터 제7회까지 법률사무소 선율 위원회가 주최하였고, 제8회부터 한국법학진흥원이
-          주최를 이어받습니다. 진흥원은 출제·검수·시상 전 과정의 학술적 표준을 책임집니다.
-        </p>
-        <a class="link" href="https://lawtest.or.kr/" target="_blank" rel="noopener">lawtest.or.kr 바로가기 →</a>
-      </div>
-      <div class="right">
-        <div class="stat-grid">
-          <div class="stat">
-            <div class="k">Editions</div>
-            <div class="v">제1~7회 시행 완료</div>
-          </div>
-          <div class="stat">
-            <div class="k">Frequency</div>
-            <div class="v">연 4회 (2026~)</div>
-          </div>
-          <div class="stat">
-            <div class="k">Subjects</div>
-            <div class="v">헌법 · 민법 · 형법</div>
-          </div>
-          <div class="stat">
-            <div class="k">Hosting</div>
-            <div class="v">제8회~ 진흥원 주최</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Partner cards -->
-    <div class="partner-grid">
-      <div class="partner">
-        <div class="cat">Public · 공익 후원</div>
-        <h4>변호사공제재단</h4>
-        <div class="en">Korean Lawyers Mutual Aid Foundation</div>
-        <p>법학경시대회 이사장상 시상 및 장학 연계. 진흥원의 학술 사업에 공익적 신뢰를 더하는 협력 기관.</p>
-      </div>
-      <div class="partner">
-        <div class="cat">Public · 공익 후원</div>
-        <h4>대한변협법률구조재단</h4>
-        <div class="en">Korean Bar Legal Aid Foundation</div>
-        <p>이사장상 시상 및 법률구조 연계. 사회적 약자를 위한 법률구조 기금 운영의 협력 파트너.</p>
-      </div>
-      <div class="partner">
-        <div class="cat">Media · 언론 협력</div>
-        <h4>법률신문</h4>
-        <div class="en">Law Times</div>
-        <p>법조 전문 언론으로 진흥원 사업과 법학경시대회의 보도·홍보를 지원합니다.</p>
-      </div>
-      <div class="partner">
-        <div class="cat">Finance · 금융 협력</div>
-        <h4>신한은행 법조타운지점</h4>
-        <div class="en">Shinhan Bank · Legal Town Branch</div>
-        <p>법조타운 내 홍보 및 기관 금융 자문. 법조 생태계 내 지속적 협력 파트너.</p>
-      </div>
-      <div class="partner">
-        <div class="cat">Law · 법률 자문</div>
-        <h4>법무법인 오킴스 · JR</h4>
-        <div class="en">Ohkims · JR</div>
-        <p>진흥원 학술 사업의 법률 자문 및 강의·감수 인력 연계.</p>
-      </div>
-      <div class="partner">
-        <div class="cat">Tech · 리걸테크 협력</div>
-        <h4>LBOX(엘박스) · 멜로디에이아이</h4>
-        <div class="en">LBOX · Melody AI</div>
-        <p>판결문 DB 연계와 AI 학습교구(LAWQUIZ) 개발 협력. 디지털 학습 기반의 핵심 파트너.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ── [6] 정보광장 ── -->
-<section class="infohub" id="info">
-  <div class="container">
-    <div class="sec-head">
-      <div class="sec-eyebrow"><span class="num">06</span> Info Hub · 정보광장</div>
-      <h2 class="sec-title">학습자와 진흥원을 <span class="gold">잇는 창구</span>입니다.</h2>
-    </div>
-
-    <div class="info-cards">
-      <div class="info-card">
-        <div class="ico">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-          </svg>
-        </div>
-        <div class="lbl">Admissions</div>
-        <h4>입학상담</h4>
         <p>
-          비학위과정 및 전문가 과정의 수강 절차, 학습 경로 설계,
-          단체·기관 교육 위탁에 관한 상담을 받습니다.
+          학력·지역·경제력의 진입장벽 없이 법학 인재를 발굴·양성하는 공익 학술 대회.
+          제1~7회는 법률사무소 선율의 위원회가 주최하였고,
+          제8회부터 한국법학진흥원이 주최를 이어받습니다.
         </p>
-        <a class="link" href="mailto:info@lawtest.co.kr?subject=[KLAI] 입학상담 문의">상담 메일 보내기 →</a>
-      </div>
-
-      <div class="info-card">
-        <div class="ico">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
-            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
-          </svg>
-        </div>
-        <div class="lbl">Resources</div>
-        <h4>자료실</h4>
-        <p>
-          진흥원 발간 자료, 학술지 논문, 강의 안내문, 표준 양식(수강신청서·환불신청서 등)을
-          제공합니다. 자료는 단계적으로 공개됩니다.
-        </p>
-        <a class="link" href="#notice">자료 안내 보기 →</a>
-      </div>
-
-      <div class="info-card">
-        <div class="ico">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <circle cx="12" cy="12" r="10"/>
-            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
-            <line x1="12" y1="17" x2="12.01" y2="17"/>
-          </svg>
-        </div>
-        <div class="lbl">FAQ</div>
-        <h4>자주 묻는 질문</h4>
-        <p>
-          수강 신청, 환불 절차, 학점은행제 인증 시점, 법학경시대회와의 관계 등에 대한
-          자주 묻는 질문과 답변을 안내합니다.
-        </p>
-        <a class="link" href="#regs">FAQ 보기 →</a>
+        <a href="https://lawtest.or.kr" target="_blank" rel="noopener" class="link">lawtest.or.kr 바로가기 ↗</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ── [7] 공지사항 ── -->
-<section class="notice" id="notice">
-  <div class="container">
-    <div class="notice-grid">
-      <div>
-        <div class="sec-eyebrow"><span class="num">07</span> Notice · 공지사항</div>
-        <h2 class="sec-title">최근 안내</h2>
-        <p class="sec-sub">
-          정규 교육 과정의 개설 일정, 외부 협력 사업의 진행 상황, 학점은행제 인증 추진 경과 등이
-          공지사항을 통해 순차 안내됩니다.
-        </p>
-        <p style="margin-top:24px"><a class="btn btn-ghost" href="mailto:info@lawtest.co.kr">문의 메일 보내기 <span class="arr">→</span></a></p>
-      </div>
-
-      <div>
-        <div>
-          <div class="notice-item">
-            <span class="tag bul">Important</span>
-            <a class="title" href="#">광화문 변호사회관 소재지 이전 안내</a>
-            <span class="date">2026.05.12</span>
-          </div>
-          <div class="notice-item">
-            <span class="tag">Program</span>
-            <a class="title" href="#non-degree">2026년도 비학위과정(법학개론·헌민형 연습) 단계별 개설</a>
-            <span class="date">2026.05.06</span>
-          </div>
-          <div class="notice-item">
-            <span class="tag">Patronage</span>
-            <a class="title" href="https://lawtest.or.kr/" target="_blank" rel="noopener">제8회 법학경시대회 한국법학진흥원 주최 전환 안내</a>
-            <span class="date">2026.04.22</span>
-          </div>
-          <div class="notice-item">
-            <span class="tag">Program</span>
-            <a class="title" href="#expert">전문가 과정 — 법령정보분석사 · 법령분석전문가 개강 안내</a>
-            <span class="date">2026.04.10</span>
-          </div>
-          <div class="notice-item">
-            <span class="tag">Notice</span>
-            <a class="title" href="#credit">학점은행제 평가인정 추진 일정 사전 안내</a>
-            <span class="date">2026.03.28</span>
-          </div>
-          <div class="notice-item">
-            <span class="tag">Notice</span>
-            <a class="title" href="#">홈페이지 정비 안내 — 콘텐츠 순차 공개 일정</a>
-            <span class="date">2026.03.10</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ── [8] 운영규정 ── -->
-<section class="regs" id="regs">
-  <div class="container">
-    <div class="sec-head">
-      <div class="sec-eyebrow"><span class="num">08</span> Regulations · 운영규정</div>
-      <h2 class="sec-title">진흥원의 <span class="gold">학사·환불 운영</span> 기준입니다.</h2>
-      <p class="sec-sub">
-        아래는 자격관리 및 교육비 환불 운영의 기본 원칙입니다. 세부 규정 전문은 자료실에서
-        다운로드할 수 있도록 단계적으로 공개됩니다.
-      </p>
-    </div>
-
-    <div class="regs-grid">
-      <div class="reg">
-        <div class="lbl">Regulation · 01</div>
-        <h4>자격관리규정</h4>
-        <p class="summary">
-          진흥원이 운영하는 비학위·전문가 과정 수료 자격의 부여·관리·취소에 관한 기본 원칙.
-        </p>
-        <ol>
-          <li><strong>적용 범위</strong> · 진흥원이 운영하는 모든 비학위 정규 과정 및 전문가 양성과정에 적용됩니다.</li>
-          <li><strong>수료 요건</strong> · 출석률 80% 이상, 평가 과제 제출, 종합 평가 60점 이상을 기본 기준으로 합니다.</li>
-          <li><strong>수료증 발급</strong> · 수료 요건을 충족한 학습자에게 진흥원장 명의의 수료증이 발급됩니다.</li>
-          <li><strong>자격 취소</strong> · 평가 부정행위·신원 위조 등이 확인된 경우 발급된 수료증의 효력이 취소됩니다.</li>
-          <li><strong>이의신청</strong> · 자격 취소 처분에 대해 통지일로부터 14일 이내 이의신청을 할 수 있습니다.</li>
-          <li><strong>평생교육사 배치</strong> · 「평생교육법」 제26조 및 시행령 제22조에 따라 평생교육사 자격을 갖춘 인력을 배치하여 교육과정을 운영합니다.</li>
-        </ol>
-      </div>
-
-      <div class="reg">
-        <div class="lbl">Regulation · 02</div>
-        <h4>교육비 환불규정</h4>
-        <p class="summary">
-          「평생교육법 시행령」 등 관계 법령에 따른 교육비 환불의 기준과 절차.
-        </p>
-        <ol>
-          <li><strong>강의 개시 전</strong> · 수강료 전액을 환불합니다.</li>
-          <li><strong>총 강의 시간의 1/3 경과 전</strong> · 수강료의 2/3에 해당하는 금액을 환불합니다.</li>
-          <li><strong>총 강의 시간의 1/2 경과 전</strong> · 수강료의 1/2에 해당하는 금액을 환불합니다.</li>
-          <li><strong>총 강의 시간의 1/2 경과 후</strong> · 환불이 이루어지지 않습니다.</li>
-          <li><strong>특별 환불 사유</strong> · 천재지변·질병·입대 등 학습자에게 책임 없는 사유의 경우 별도 협의에 따라 환불 처리됩니다.</li>
-          <li><strong>신청 방법</strong> · 환불신청서를 작성하여 진흥원 대표 메일로 제출합니다.</li>
-        </ol>
-      </div>
-    </div>
-  </div>
-</section>
-
-</main>
-
-<!-- ── Footer ── -->
-<footer class="contact" id="contact">
-  <div class="container">
-    <div class="contact-grid">
-      <div class="contact-brand">
-        <svg class="footer-logo" viewBox="0 0 360 220" xmlns="http://www.w3.org/2000/svg" aria-label="한국법학진흥원 KLAI">
-          <g font-family="'Noto Sans KR', 'Arial Black', sans-serif" font-weight="900" font-size="92" letter-spacing="-2">
-            <text x="14" y="100" fill="#D02638">K</text>
-            <text x="76" y="100" fill="#F5EFE4">LAI</text>
+<footer>
+  <div class="foot-inner">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <svg viewBox="0 0 280 70" xmlns="http://www.w3.org/2000/svg" aria-label="KLAI">
+          <g font-family="'Noto Sans KR','Arial Black',sans-serif" font-weight="900" font-size="42" letter-spacing="-1.2">
+            <text x="6" y="40" fill="#D02638">K</text>
+            <text x="34" y="40" fill="#F5EFE4">LAI</text>
           </g>
-          <path d="M 195 78 Q 245 56 308 88" fill="none" stroke="#D02638" stroke-width="2.4" stroke-linecap="round" opacity="0.9"/>
-          <text x="180" y="158" text-anchor="middle" font-family="'Noto Sans KR', sans-serif" font-weight="700" font-size="32" letter-spacing="2" fill="#F5EFE4">한국법학진흥원</text>
-          <text x="180" y="190" text-anchor="middle" font-family="'Noto Sans KR', 'Arial', sans-serif" font-weight="500" font-size="13" letter-spacing="3" fill="#C8A968">KOREA LAW ADVANCEMENT INSTITUTE</text>
+          <path d="M 88 32 Q 116 22 142 36" fill="none" stroke="#D02638" stroke-width="1.4" stroke-linecap="round" opacity="0.9"/>
+          <text x="6" y="62" font-family="'Noto Sans KR',sans-serif" font-weight="700" font-size="17" letter-spacing="3" fill="#F5EFE4">한국법학진흥원</text>
         </svg>
         <p>
-          법학 교육의 대중화와 학습 표준 정립을 위한
-          교육청 등록 평생학습기관. 비학위·전문가 과정 운영과
-          법학경시대회 주최, 학술·출판 사업을 수행합니다.
+          법학의 대중화와 학습 표준 정립을 위해 설립된 비영리 학술 기관.
+          부속 연수원 운영, 법학경시대회 주최, 학술·출판·연구 사업을 수행합니다.
         </p>
-        <div class="legal-info">
-          <div class="row"><b>법인명</b><span>한국법학진흥원</span></div>
-          <div class="row"><b>대표자</b><span>김민규</span></div>
-          <div class="row"><b>사업자등록번호</b><span>110-82-89098</span></div>
-          <div class="row"><b>소재지</b><span>서울 종로구 새문안로5길 13, 지하1층 29호 (당주동, 변호사회관)</span></div>
-          <div class="row"><b>업태</b><span>교육서비스업 · 법학연구개발업 · 평생교육시설 운영</span></div>
-          <div class="row"><b>설립일</b><span>2024.11.26</span></div>
-          <div class="row"><b>통신판매업</b><span>신고번호 추후 안내</span></div>
-        </div>
       </div>
-
-      <div class="contact-col">
+      <div class="foot-col">
         <h5>Navigation</h5>
         <ul>
           <li><a href="#about">진흥원 소개</a></li>
-          <li><a href="#non-degree">비학위과정</a></li>
-          <li><a href="#credit">학점은행제</a></li>
-          <li><a href="#expert">전문가 과정</a></li>
-          <li><a href="#patronage">후원·협력</a></li>
+          <li><a href="#twin">부속·후원</a></li>
+          <li><a href="https://klaiedu.com" target="_blank" rel="noopener">연수원 ↗</a></li>
+          <li><a href="https://lawtest.or.kr" target="_blank" rel="noopener">법학경시대회 ↗</a></li>
         </ul>
       </div>
-
-      <div class="contact-col">
-        <h5>Information</h5>
-        <ul>
-          <li><a href="#info">입학상담</a></li>
-          <li><a href="#info">자료실</a></li>
-          <li><a href="#info">자주 묻는 질문</a></li>
-          <li><a href="#notice">공지사항</a></li>
-          <li><a href="#regs">운영규정</a></li>
-          <li><a href="https://lawtest.or.kr/" target="_blank" rel="noopener">법학경시대회 ↗</a></li>
-        </ul>
-      </div>
-
-      <div class="contact-col">
+      <div class="foot-col">
         <h5>Contact</h5>
-        <div class="info-row"><span class="k">Mail</span><span class="v"><a href="mailto:info@lawtest.co.kr" style="color:#E0D2B5">info@lawtest.co.kr</a></span></div>
-        <div class="info-row"><span class="k">Phone</span><span class="v">대표 번호 정비 중<br>(메일 우선 회신)</span></div>
-        <div class="info-row"><span class="k">Hours</span><span class="v">평일 10:00–17:00</span></div>
-        <div class="info-row"><span class="k">Subway</span><span class="v">5호선 광화문역<br>도보 3분</span></div>
+        <ul>
+          <li><a href="mailto:info@lawtest.co.kr">info@lawtest.co.kr</a></li>
+          <li>광화문 변호사회관</li>
+          <li>평일 10:00–17:00</li>
+        </ul>
       </div>
     </div>
-
-    <div class="foot">
+    <div class="legal">
+      <div class="row"><b>기관명</b><span>한국법학진흥원 (비영리 단체)</span></div>
+      <div class="row"><b>대표자</b><span>김민규</span></div>
+      <div class="row"><b>사업자등록번호</b><span>110-82-89098</span></div>
+      <div class="row"><b>소재지</b><span>서울 종로구 새문안로5길 13, 지하1층 29호 (당주동, 변호사회관)</span></div>
+      <div class="row"><b>설립일</b><span>2024.11.26</span></div>
+      <div class="row"><b>부속 시설</b><span>한국법학진흥원 연수원 (klaiedu.com)</span></div>
+    </div>
+    <div class="foot-bottom">
       <span>© 2026 Korea Law Advancement Institute. All Rights Reserved.</span>
       <span class="est">EST · MMXXIV · 韓國法學振興院</span>
-      <span class="legal">
-        <a href="#">개인정보처리방침</a>
-        <a href="#">이용약관</a>
-      </span>
     </div>
   </div>
 </footer>
 
-<script>
-  // About tabs
-  (function(){
-    const tabs = document.querySelectorAll('.about-tabs button');
-    const panels = document.querySelectorAll('.about-panel');
-    tabs.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const target = btn.getAttribute('data-tab');
-        tabs.forEach(b => b.classList.remove('active'));
-        panels.forEach(p => p.classList.remove('active'));
-        btn.classList.add('active');
-        document.querySelector('.about-panel[data-panel="' + target + '"]').classList.add('active');
-      });
-    });
-  })();
-
-  // Mobile menu
-  (function(){
-    const btn = document.getElementById('menuBtn');
-    const nav = document.getElementById('mainNav');
-    if(!btn || !nav) return;
-    btn.addEventListener('click', () => {
-      const open = nav.classList.toggle('open');
-      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-      btn.textContent = open ? 'CLOSE' : 'MENU';
-    });
-    nav.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', () => {
-        if(window.innerWidth <= 980){
-          nav.classList.remove('open');
-          btn.setAttribute('aria-expanded', 'false');
-          btn.textContent = 'MENU';
-        }
-      });
-    });
-  })();
-</script>
 </body>
 </html>
