@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>한국법학진흥원</title>
-<meta name="description" content="한국법학진흥원은 법학의 진흥과 법조 직역의 발전을 위한 비영리 단체입니다.">
-<meta name="theme-color" content="#0A0A0A">
+<meta name="description" content="한국법학진흥원 공식 안내 누리집. 법학교육 지원, 법조 직역 연구, 공익 법률교육 및 부설기관 운영 정보를 제공합니다.">
+<meta name="theme-color" content="#003675">
 <meta property="og:title" content="한국법학진흥원">
-<meta property="og:description" content="법학의 진흥과 법조 직역의 발전을 위한 비영리 단체">
+<meta property="og:description" content="법학교육 지원, 법조 직역 연구, 공익 법률교육 및 부설기관 운영 정보를 제공하는 공식 안내 누리집입니다.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://klai.or.kr/">
 <meta property="og:locale" content="ko_KR">
@@ -18,15 +18,17 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
   :root{
-    --ink:#0A0A0A;
-    --ink-2:#2A2A2A;
-    --ink-3:#666;
-    --ink-4:#A8A8A8;
-    --line:#E8E8E8;
-    --line-2:#1F1F1F;
+    --ink:#1D1D1D;
+    --ink-2:#333D4B;
+    --ink-3:#58606D;
+    --ink-4:#8A94A3;
+    --line:#DDE3EA;
+    --line-2:#38506F;
     --bg:#FFFFFF;
-    --bg-2:#F8F8F6;
-    --crimson:#9A0F1B;
+    --bg-2:#F5F7FA;
+    --crimson:#003675;
+    --blue:#003675;
+    --blue-2:#E9F1FA;
     --max:1200px;
   }
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -59,8 +61,8 @@
   }
   nav a:hover{color:var(--ink)}
   nav a.cta{
-    padding:9px 18px; background:var(--crimson); color:#fff;
-    font-weight:500;
+    padding:9px 18px; background:var(--blue); color:#fff;
+    font-weight:700; border-radius:4px;
   }
   nav a.cta:hover{background:var(--ink)}
   
@@ -94,7 +96,7 @@
     position:relative;
     overflow:hidden;
   }
-  /* 배경 워터마크 영문 — 페이지에 묵직함 */
+  /* 배경 워터마크 */
   .hero::before{
     content:'KLAI';
     position:absolute;
@@ -106,7 +108,7 @@
     z-index:0; user-select:none;
     font-family:'Noto Sans KR', sans-serif;
   }
-  /* 우측 일러스트 — 기둥+천칭+법전 (또는 사진) */
+  /* 우측 일러스트 */
   .hero-mark{
     position:absolute;
     right:6vw; top:50%;
@@ -163,10 +165,10 @@
     position:relative; z-index:2;
   }
 
-  /* ── 2. 사업 (3가지) ── */
+  /* ── 2. 주요 업무 ── */
   .biz{
     padding:100px 32px;
-    background:var(--ink); color:#fff;
+    background:var(--blue); color:#fff;
     border-bottom:none;
   }
   .biz .label{color:#fff}
@@ -246,10 +248,10 @@
     max-width:680px; font-weight:400;
   }
 
-  /* ── 5. CTA (후원·문의) ── */
+  /* ── 5. 문의 안내 ── */
   .cta{
     padding:110px 32px;
-    background:var(--ink); color:#fff;
+    background:var(--blue); color:#fff;
     border-bottom:none;
   }
   .cta h2{
@@ -258,7 +260,7 @@
     font-weight:700; color:#fff;
     max-width:760px; margin-bottom:36px;
   }
-  .cta h2 em{font-style:normal; color:var(--crimson); font-weight:700}
+  .cta h2 em{font-style:normal; color:#fff; font-weight:700}
   .cta-row{
     display:flex; gap:12px; flex-wrap:wrap;
   }
@@ -271,7 +273,7 @@
   .btn .arr{transition:transform .2s; font-size:14px}
   .btn:hover .arr{transform:translateX(4px)}
   .btn-light{background:#fff; color:var(--ink); border-color:#fff}
-  .btn-light:hover{background:var(--crimson); color:#fff; border-color:var(--crimson)}
+  .btn-light:hover{background:#E5EDF7; color:var(--blue); border-color:#E5EDF7}
   .btn-line{color:#fff; border-color:rgba(255,255,255,.3)}
   .btn-line:hover{border-color:#fff; background:rgba(255,255,255,.06)}
 
@@ -363,7 +365,7 @@
     filter:grayscale(1);
   }
   .logo-card:hover{
-    background:var(--ink);
+    background:var(--blue);
     z-index:2;
   }
   .logo-card:hover .name{
@@ -422,10 +424,11 @@
     </a>
     <nav aria-label="주메뉴">
       <ul>
-        <li><a href="#biz" class="hide-sm">사업</a></li>
+        <li><a href="#biz" class="hide-sm">주요 업무</a></li>
         <li><a href="#subs" class="hide-sm">부설기관</a></li>
-        <li><a href="#define" class="hide-sm">개요</a></li>
-        <li><a href="#cta" class="cta">후원·문의</a></li>
+        <li><a href="#define" class="hide-sm">운영 기준</a></li>
+        <li><a href="#partners" class="hide-sm">관련 기관</a></li>
+        <li><a href="#contact" class="cta">문의</a></li>
       </ul>
     </nav>
   </div>
@@ -441,11 +444,12 @@
   </figure>
   <div class="inner">
     <h1>
-      <span class="pt">법학의 진흥과</span>
-      <span class="pt">법조 직역의 발전</span>
+      <span class="pt">한국법학진흥원</span>
+      <span class="pt">공식 안내</span>
     </h1>
     <p class="hero-lede">
-      한국법학진흥원은 법학교육 지원과 청년변호사 옹호, 변호사 직역 연구를 수행하는 비영리 단체입니다.
+      한국법학진흥원은 법학교육 지원, 법조 직역 연구, 공익 법률교육을 수행하는 비영리 법학기관입니다.
+      본 누리집은 기관의 주요 업무와 부설기관, 문의 창구를 안내합니다.
     </p>
   </div>
 </section>
@@ -453,22 +457,22 @@
 <!-- 2. 사업 — 3가지 -->
 <section class="biz" id="biz">
   <div class="inner">
-    <span class="label on-dark">사업</span>
+    <span class="label on-dark">주요 업무</span>
     <div class="biz-grid">
       <article class="biz-item">
         <div class="num">01</div>
-        <h3>사회봉사</h3>
-        <p>법률구조 협력과 공익 법률 사업을 통해 사회적 약자의 법률 접근성을 높입니다.</p>
+        <h3>법학교육 지원</h3>
+        <p>기초 법학 교육, 실무형 연수, 법률 문해력 향상을 위한 교육 프로그램을 기획·운영합니다.</p>
       </article>
       <article class="biz-item">
         <div class="num">02</div>
-        <h3>청년변호사 지원</h3>
-        <p>기부·멘토링·강사 위촉을 통해 개업 초기 청년변호사의 자립을 돕습니다.</p>
+        <h3>법조 직역 연구</h3>
+        <p>변호사 직역, 법학교육 제도, 법률서비스 접근성에 관한 조사와 연구를 수행합니다.</p>
       </article>
       <article class="biz-item">
         <div class="num">03</div>
-        <h3>직역 연구</h3>
-        <p>변호사 직역과 법학교육 정책에 관한 학술 연구를 수행합니다.</p>
+        <h3>공익 법률교육</h3>
+        <p>시민과 예비 법조인이 신뢰할 수 있는 법률 정보를 접할 수 있도록 자료와 교육 기회를 제공합니다.</p>
       </article>
     </div>
   </div>
@@ -481,12 +485,12 @@
     <div class="subs-grid">
       <a href="ready.html" class="sub-item">
         <h3>법학연구소</h3>
-        <p>변호사 직역과 법학교육에 관한 학술 연구.</p>
+        <p>법학교육, 법조 직역, 공익 법률서비스에 관한 연구를 수행합니다.</p>
         <span class="go">준비 중 <span class="arr">→</span></span>
       </a>
       <a href="https://law-test.github.io/klaiedu" target="_blank" rel="noopener" class="sub-item">
         <h3>연수원</h3>
-        <p>법학 교육과정 운영.</p>
+        <p>법학 교육과 연수 과정을 체계적으로 운영합니다.</p>
         <span class="go">https://law-test.github.io/klaiedu/ <span class="arr">↗</span></span>
       </a>
     </div>
@@ -496,23 +500,22 @@
 <!-- 5. 정의 (구 "개요") -->
 <section class="define" id="define">
   <div class="inner">
-    <span class="label">개요</span>
+    <span class="label">운영 기준</span>
     <h2>
-      법학교육의 공백을 메우고,
-      법조 직역의 발전을 위해 활동하는
-      비영리 단체입니다.
+      공익성, 전문성, 투명성을 기준으로
+      법학교육과 법조 직역 연구를 수행합니다.
     </h2>
-    <p class="define-sub">광화문 변호사회관에 본부를 두고 있으며, 부설 법학연구소와 연수원을 운영합니다.</p>
+    <p class="define-sub">기관 운영 정보와 문의 창구는 본 누리집에 공개하며, 교육·연구 활동은 법학의 공공성과 신뢰성을 높이는 방향으로 관리합니다.</p>
   </div>
 </section>
 
 <!-- 6. CTA -->
-<section class="cta" id="cta">
+<section class="cta" id="contact">
   <div class="inner">
-    <h2><em>여러분의 후원이</em> 법조 공동체의 미래를 만듭니다</h2>
+    <h2><em>문의 및 자료 요청은</em><br>공식 이메일로 접수합니다</h2>
     <div class="cta-row">
-      <a href="#" class="btn btn-light">후원하기 <span class="arr">→</span></a>
-      <a href="mailto:info@klai.or.kr" class="btn btn-line">문의 <span class="arr">→</span></a>
+      <a href="mailto:info@klai.or.kr" class="btn btn-light">이메일 문의 <span class="arr">→</span></a>
+      <a href="#partners" class="btn btn-line">관련 기관 보기 <span class="arr">→</span></a>
     </div>
   </div>
 </section>
@@ -520,7 +523,7 @@
 </main>
 
 <!-- 관련 기관 (사법연수원 패밀리사이트 스타일) -->
-<section class="partners">
+<section class="partners" id="partners">
   <div class="partners-inner">
     <div class="partners-head">
       <span class="label">관련 기관</span>
