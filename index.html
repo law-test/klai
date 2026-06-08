@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>한국법학진흥원</title>
-<meta name="description" content="한국법학진흥원 공식 안내 누리집. 법학교육 지원, 법조 직역 연구, 공익 법률교육 및 부설기관 운영 정보를 제공합니다.">
-<meta name="theme-color" content="#003675">
+<meta name="description" content="한국법학진흥원 기관 소개. 법학 연구, 법학교육 기반 조성, 법조 직역 연구와 부설기관 운영 정보를 제공합니다.">
+<meta name="theme-color" content="#4A1F2A">
 <meta property="og:title" content="한국법학진흥원">
-<meta property="og:description" content="법학교육 지원, 법조 직역 연구, 공익 법률교육 및 부설기관 운영 정보를 제공하는 공식 안내 누리집입니다.">
+<meta property="og:description" content="법학 연구, 법학교육 기반 조성, 법조 직역 연구와 부설기관 운영 정보를 제공하는 기관 소개 페이지입니다.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://klai.or.kr/">
 <meta property="og:locale" content="ko_KR">
@@ -18,17 +18,18 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
   :root{
-    --ink:#1D1D1D;
-    --ink-2:#333D4B;
-    --ink-3:#58606D;
-    --ink-4:#8A94A3;
-    --line:#DDE3EA;
-    --line-2:#38506F;
+    --ink:#1f1b1c;
+    --ink-2:#383133;
+    --ink-3:#6b6063;
+    --ink-4:#9b9294;
+    --line:#e4ded9;
+    --line-2:#6b3a45;
     --bg:#FFFFFF;
-    --bg-2:#F5F7FA;
-    --crimson:#003675;
-    --blue:#003675;
-    --blue-2:#E9F1FA;
+    --bg-2:#f7f4ef;
+    --crimson:#4a1f2a;
+    --wine:#4a1f2a;
+    --wine-soft:#f3e8e5;
+    --paper:#fbf8f2;
     --max:1200px;
   }
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -61,7 +62,7 @@
   }
   nav a:hover{color:var(--ink)}
   nav a.cta{
-    padding:9px 18px; background:var(--blue); color:#fff;
+    padding:9px 18px; background:var(--wine); color:#fff;
     font-weight:700; border-radius:4px;
   }
   nav a.cta:hover{background:var(--ink)}
@@ -95,6 +96,7 @@
     border-bottom:1px solid var(--line);
     position:relative;
     overflow:hidden;
+    background:linear-gradient(90deg, var(--paper) 0%, #fff 58%);
   }
   /* 배경 워터마크 */
   .hero::before{
@@ -103,7 +105,7 @@
     right:-40px; bottom:-30px;
     font-size:clamp(180px, 24vw, 360px);
     font-weight:900; letter-spacing:-0.05em;
-    color:var(--bg-2); /* 매우 옅은 회색 */
+    color:#f0ebe3;
     line-height:1; pointer-events:none;
     z-index:0; user-select:none;
     font-family:'Noto Sans KR', sans-serif;
@@ -168,7 +170,7 @@
   /* ── 2. 주요 업무 ── */
   .biz{
     padding:100px 32px;
-    background:var(--blue); color:#fff;
+    background:var(--wine); color:#fff;
     border-bottom:none;
   }
   .biz .label{color:#fff}
@@ -251,7 +253,7 @@
   /* ── 5. 문의 안내 ── */
   .cta{
     padding:110px 32px;
-    background:var(--blue); color:#fff;
+    background:var(--wine); color:#fff;
     border-bottom:none;
   }
   .cta h2{
@@ -273,7 +275,7 @@
   .btn .arr{transition:transform .2s; font-size:14px}
   .btn:hover .arr{transform:translateX(4px)}
   .btn-light{background:#fff; color:var(--ink); border-color:#fff}
-  .btn-light:hover{background:#E5EDF7; color:var(--blue); border-color:#E5EDF7}
+  .btn-light:hover{background:var(--wine-soft); color:var(--wine); border-color:var(--wine-soft)}
   .btn-line{color:#fff; border-color:rgba(255,255,255,.3)}
   .btn-line:hover{border-color:#fff; background:rgba(255,255,255,.06)}
 
@@ -365,7 +367,7 @@
     filter:grayscale(1);
   }
   .logo-card:hover{
-    background:var(--blue);
+    background:var(--wine);
     z-index:2;
   }
   .logo-card:hover .name{
@@ -426,7 +428,7 @@
       <ul>
         <li><a href="#biz" class="hide-sm">주요 업무</a></li>
         <li><a href="#subs" class="hide-sm">부설기관</a></li>
-        <li><a href="#define" class="hide-sm">운영 기준</a></li>
+        <li><a href="#define" class="hide-sm">기관 원칙</a></li>
         <li><a href="#partners" class="hide-sm">관련 기관</a></li>
         <li><a href="#contact" class="cta">문의</a></li>
       </ul>
@@ -444,12 +446,12 @@
   </figure>
   <div class="inner">
     <h1>
-      <span class="pt">한국법학진흥원</span>
-      <span class="pt">공식 안내</span>
+      <span class="pt">법학 연구와</span>
+      <span class="pt">교육 기반을 세웁니다</span>
     </h1>
     <p class="hero-lede">
-      한국법학진흥원은 법학교육 지원, 법조 직역 연구, 공익 법률교육을 수행하는 비영리 법학기관입니다.
-      본 누리집은 기관의 주요 업무와 부설기관, 문의 창구를 안내합니다.
+      한국법학진흥원은 법학 연구, 법학교육 기반 조성, 법조 직역 연구를 수행하는 비영리 법학기관입니다.
+      부설 법학연구소와 연수원을 통해 연구와 교육이 이어지는 구조를 마련합니다.
     </p>
   </div>
 </section>
@@ -461,18 +463,18 @@
     <div class="biz-grid">
       <article class="biz-item">
         <div class="num">01</div>
-        <h3>법학교육 지원</h3>
-        <p>기초 법학 교육, 실무형 연수, 법률 문해력 향상을 위한 교육 프로그램을 기획·운영합니다.</p>
+        <h3>법학 연구</h3>
+        <p>법학교육 제도, 법조 직역, 법률서비스 접근성에 관한 조사와 연구를 수행합니다.</p>
       </article>
       <article class="biz-item">
         <div class="num">02</div>
-        <h3>법조 직역 연구</h3>
-        <p>변호사 직역, 법학교육 제도, 법률서비스 접근성에 관한 조사와 연구를 수행합니다.</p>
+        <h3>교육 기반 조성</h3>
+        <p>부설 연수원과 교육 자료를 통해 기초 법학과 실무 학습의 기반을 마련합니다.</p>
       </article>
       <article class="biz-item">
         <div class="num">03</div>
-        <h3>공익 법률교육</h3>
-        <p>시민과 예비 법조인이 신뢰할 수 있는 법률 정보를 접할 수 있도록 자료와 교육 기회를 제공합니다.</p>
+        <h3>공익 법률문화</h3>
+        <p>법률 정보의 공공성과 시민의 법률 문해력 향상을 위한 자료와 협력 활동을 준비합니다.</p>
       </article>
     </div>
   </div>
@@ -500,19 +502,19 @@
 <!-- 5. 정의 (구 "개요") -->
 <section class="define" id="define">
   <div class="inner">
-    <span class="label">운영 기준</span>
+    <span class="label">기관 원칙</span>
     <h2>
-      공익성, 전문성, 투명성을 기준으로
-      법학교육과 법조 직역 연구를 수행합니다.
+      연구의 정확성, 교육의 공공성,
+      운영의 투명성을 기준으로 활동합니다.
     </h2>
-    <p class="define-sub">기관 운영 정보와 문의 창구는 본 누리집에 공개하며, 교육·연구 활동은 법학의 공공성과 신뢰성을 높이는 방향으로 관리합니다.</p>
+    <p class="define-sub">기관 운영 정보와 문의 창구는 이 페이지에 공개하며, 연구·교육 활동은 법학의 공공성과 신뢰성을 높이는 방향으로 관리합니다.</p>
   </div>
 </section>
 
 <!-- 6. CTA -->
 <section class="cta" id="contact">
   <div class="inner">
-    <h2><em>문의 및 자료 요청은</em><br>공식 이메일로 접수합니다</h2>
+    <h2><em>기관 문의와 자료 요청은</em><br>이메일로 접수합니다</h2>
     <div class="cta-row">
       <a href="mailto:info@klai.or.kr" class="btn btn-light">이메일 문의 <span class="arr">→</span></a>
       <a href="#partners" class="btn btn-line">관련 기관 보기 <span class="arr">→</span></a>
